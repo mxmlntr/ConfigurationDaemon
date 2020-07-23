@@ -10,11 +10,11 @@
 class update_manager:public process_manager {
 
 private:
-
+    string filename = "UMGR.json";
 public:
     update_manager();
     file file1;
-    file file2;
+    //file file2;
 };
 
 

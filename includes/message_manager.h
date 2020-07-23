@@ -6,6 +6,7 @@
 #define CONFIGURATION_DAEMON_MESSAGE_MANAGER_H
 
 #include "boost/interprocess/ipc/message_queue.hpp"
+#include "boost/scoped_ptr.hpp"
 #include "data_storage.h"
 
 using namespace boost::interprocess;
@@ -13,11 +14,13 @@ using namespace boost::interprocess;
 class message_manager
 {
 private:
-
+    boost::scoped_ptr<message_queue> mq;
 public:
     message_manager();
-    void send_msg(string message);
-    //message_queue umgr_queue(open_or_create_t, "UMGR_QUEUE", 20,sizeof(string));
+    void send_msg(char message, unsigned int priority);
+    char receive_msg(unsigned int priority);
+    int createQUEUE(string filename);
+    int destroyQUEUE(string filename);
 };
 
 

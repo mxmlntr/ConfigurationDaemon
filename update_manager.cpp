@@ -7,11 +7,20 @@
 //Constructor which initializes all the update_manager-specific values
 update_manager::update_manager()
 {
-    processDES.setfilename("UMGR.json");
+    //create the messagequeue for synchronisation with the receiving process
+    processMSGQUE.createQUEUE(filename);
 
-    file1.setfilename("UMGR.json");
-    file2.setfilename("ANYFILENAME");
+    //Set the filename for the deserializer
+    processDES.setfilename(filename);
 
+    //Set the filenames for files associated with this process
+    file1.setfilename(filename);
     file1.callJSON();
+    //file2.setfilename("ANYFILENAME");
     //file2.callJSON();
+
+    processMSGQUE.send_msg('a',1);
+    cout << "Message receives:" << processMSGQUE.receive_msg(1) << endl;
+
+    processMSGQUE.destroyQUEUE(filename);
 };

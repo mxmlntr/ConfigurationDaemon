@@ -6,7 +6,7 @@
 
 void  serializer::serializeStructToFile(UMGR_s UnSerData, string filename)
 {
-    filename.erase(filename.end(),filename.end()-5);
+    filename.erase(filename.length()-5 , 5);
     string SHMfilename = "serial"+filename;
 
     /* DATA SERIALIZATION */
@@ -38,6 +38,6 @@ void serializer::serializeStructToSHM(UMGR_s UnSerData, string filename)
     bs.buffer(reinterpret_cast<char*>(region.get_address()), region.get_size());
     //std::ostringstream bs;
 
-    boost::archive::binary_oarchive oa(bs);
+    boost::archive::text_oarchive oa(bs);
     oa << UnSerData;
 };

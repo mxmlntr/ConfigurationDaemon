@@ -13,6 +13,7 @@ int main(int argc, char **argv)
     //deserializer des("UMGR.json");
     //UMGR_s data;
     //des.deserializeStructFromSHM(&data);
+    /*
     if (fork() == 0)
     {
         //only for checking
@@ -37,7 +38,7 @@ int main(int argc, char **argv)
 
         cout << "received:" << deserializedStruct.description << endl;
     }
-
+*/
     return 0;
 }
 

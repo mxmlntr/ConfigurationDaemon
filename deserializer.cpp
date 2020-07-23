@@ -21,7 +21,7 @@ void deserializer::setfilename(string name)
 
 void deserializer::deserializeStructFromFile(UMGR_s *Data_s)
 {
-    filename.erase(filename.end(),filename.end()-5);
+    filename.erase(filename.length()-5,5);
     string SHMfilename = "serial"+filename;
 
     {

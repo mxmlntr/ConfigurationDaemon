@@ -14,7 +14,7 @@ int message_manager::createQUEUE(string filename)
     filename.erase(filename.length()-5 , 5);
     string QUEUEfilename = filename+"QUEUE";
 
-    mq.reset(new message_queue(open_or_create, QUEUEfilename.c_str(), 100, sizeof(char)));
+    msgque.reset(new message_queue(open_or_create, QUEUEfilename.c_str(), 10, sizeof(int)));
 
     cout << "Created queue named:" << QUEUEfilename << endl;
 
@@ -25,23 +25,29 @@ int message_manager::destroyQUEUE(string filename)
 {
     filename.erase(filename.length()-5 , 5);
     string QUEUEfilename = filename+"QUEUE";
-    mq->remove(QUEUEfilename.c_str());
+    if (msgque->remove(QUEUEfilename.c_str()))
+    {
+        cout << "Destroyed queue named:" << QUEUEfilename << endl;
+        return 1;
+    }
+    else
+    {
+        cout << "Could not destroy queue named:" << QUEUEfilename << endl;
+        return 0;
+    }
 
-    cout << "Destroyed queue named:" << QUEUEfilename << endl;
-
-    return 1;
 };
 
-void message_manager::send_msg(char message,unsigned int priority)
+void message_manager::send_msg(int message,unsigned int priority)
 {
-    mq->send(&message,sizeof(char),priority);
+    msgque->send(&message,sizeof(int),priority);
 };
 
-char message_manager::receive_msg(unsigned int priority)
+int message_manager::receive_msg(unsigned int priority)
 {
-    char message;
+    int message;
     size_t recvd_size;
-    mq->receive((void*) &message,sizeof(char),recvd_size,priority);
+    msgque->receive((void*) &message,sizeof(int),recvd_size,priority);
     return message;
 };
 

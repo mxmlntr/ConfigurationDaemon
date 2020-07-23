@@ -14,11 +14,11 @@ using namespace boost::interprocess;
 class message_manager
 {
 private:
-    boost::scoped_ptr<message_queue> mq;
+    std::unique_ptr<message_queue> msgque;
 public:
     message_manager();
-    void send_msg(char message, unsigned int priority);
-    char receive_msg(unsigned int priority);
+    void send_msg(int message, unsigned int priority);
+    int receive_msg(unsigned int priority);
     int createQUEUE(string filename);
     int destroyQUEUE(string filename);
 };

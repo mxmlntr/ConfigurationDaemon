@@ -19,8 +19,9 @@ update_manager::update_manager()
     //file2.setfilename("ANYFILENAME");
     //file2.callJSON();
 
-    processMSGQUE.send_msg('a',1);
-    cout << "Message receives:" << processMSGQUE.receive_msg(1) << endl;
+    int msg = 1337;
+    processMSGQUE.send_msg(msg,1);
+    cout << "Message received:" << processMSGQUE.receive_msg(1) << endl;
 
     processMSGQUE.destroyQUEUE(filename);
 };

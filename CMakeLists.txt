@@ -18,5 +18,5 @@ include_directories(~/CLionProjects/Configuration_daemon/includes/
 
 find_library(LIB_RT rt)
 
-target_link_libraries(${PROJECT_NAME} libboost_serialization.a
+target_link_libraries(${PROJECT_NAME} libboost_serialization.a libboost_iostreams.a
         ${LIB_RT})

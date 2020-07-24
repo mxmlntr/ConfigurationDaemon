@@ -5,7 +5,6 @@
 #ifndef CONFIGURATION_DAEMON_DATA_STORAGE_H
 #define CONFIGURATION_DAEMON_DATA_STORAGE_H
 
-#include <iostream>
 #include <fstream>
 #include <string>
 #include <stdint.h>

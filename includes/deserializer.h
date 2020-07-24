@@ -23,6 +23,7 @@ public:
     void setfilename(string name);
     void deserializeStructFromFile(UMGR_s *Data_s);
     void deserializeStructFromSHM(UMGR_s *Data_s);
+    void deserializeStructFromFileMemMap(UMGR_s *Data_s);
 };
 
 #endif //CONFIGURATION_DAEMON_DESERIALIZER_H

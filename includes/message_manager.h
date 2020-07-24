@@ -5,6 +5,7 @@
 #ifndef CONFIGURATION_DAEMON_MESSAGE_MANAGER_H
 #define CONFIGURATION_DAEMON_MESSAGE_MANAGER_H
 
+#include <iostream>
 #include "boost/interprocess/ipc/message_queue.hpp"
 #include "boost/scoped_ptr.hpp"
 #include "data_storage.h"

@@ -35,6 +35,12 @@ void deserializer::deserializeStructFromFile(UMGR_s *Data_s)
     }
 };
 
+void deserializeStructFromFileMemMap(UMGR_s *Data_s)
+{
+
+
+};
+
 void deserializer::deserializeStructFromSHM(UMGR_s *Data_s)
 {
     filename.erase(filename.length()-5 , 5);
@@ -49,7 +55,8 @@ void deserializer::deserializeStructFromSHM(UMGR_s *Data_s)
 
     boost::archive::text_iarchive ia(bs);
     ia >> *Data_s;
-
 };
+
+
 
 

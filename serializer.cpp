@@ -7,17 +7,28 @@
 void  serializer::serializeStructToFile(UMGR_s UnSerData, string filename)
 {
     filename.erase(filename.length()-5 , 5);
-    string SHMfilename = "serial"+filename;
+    string binaryfilename = "serial"+filename;
 
-    /* DATA SERIALIZATION */
+    vector<string> strArray(2000000);
+
+    mapped_file_params params;
+    params.path          = "binaryfile.txt";
+    params.new_file_size = sizeof(strArray);
+    params.flags         = mapped_file::mapmode::readwrite;
+
+    stream<mapped_file_sink> out(params);
+
+    copy(strArray.begin(), strArray.end(), ostream_iterator<string>(out, "\n"));
+
+    /* DATA SERIALIZATION with standard file opening (ofstream) */
     // create and open a character archive for output
-    std::ofstream ofs("serial"+filename);
+    //std::ofstream ofs("serial"+filename);
     // save data to archive
-    boost::archive::binary_oarchive oa(ofs);
+    //boost::archive::binary_oarchive oa(ofs);
     // write class instance to archive
-    oa << UnSerData;
+    //oa << UnSerData;
     // archive and stream closed when destructors are called
-    ofs.close();
+    //ofs.close();
 };
 
 void serializer::serializeStructToSHM(UMGR_s UnSerData, string filename)

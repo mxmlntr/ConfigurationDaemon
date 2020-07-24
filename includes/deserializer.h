@@ -11,8 +11,11 @@
 #include <boost/archive/binary_iarchive.hpp>
 #include <boost/archive/binary_oarchive.hpp>
 #include <boost/interprocess/managed_shared_memory.hpp>
+#include <boost/iostreams/device//mapped_file.hpp>
+#include <boost/iostreams/stream.hpp>
 
 using namespace boost::interprocess;
+using namespace boost::iostreams;
 
 class deserializer{
 private:

@@ -23,6 +23,7 @@ private:
 
 public:
     void serializeStructToFile(UMGR_s UnSerData, string filename);
+    void serializeStructToFileMemMap(UMGR_s UnSerData, string filename);
     void serializeStructToSHM(UMGR_s UnSerData, string filename);
 };
 

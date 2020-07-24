@@ -24,21 +24,30 @@ void deserializer::deserializeStructFromFile(UMGR_s *Data_s)
     filename.erase(filename.length()-5,5);
     string SHMfilename = "serial"+filename;
 
-    {
-        // create and open an archive for input
-        std::ifstream ifs(SHMfilename);
-        boost::archive::binary_iarchive ia(ifs);
-        // read class state from archive
-        ia >> *Data_s;
-        // archive and stream closed when destructors are called
-        ifs.close();
-    }
+    // create and open an archive for input
+    std::ifstream ifs(SHMfilename);
+    boost::archive::binary_iarchive ia(ifs);
+    // read class state from archive
+    ia >> *Data_s;
+    // archive and stream closed when destructors are called
+    ifs.close();
+
 };
 
-void deserializeStructFromFileMemMap(UMGR_s *Data_s)
+void deserializer::deserializeStructFromFileMemMap(UMGR_s *Data_s)
 {
+    filename.erase(filename.length()-5 , 5);
+    string binaryfilename = "serial"+filename;
 
+    mapped_file_params params;
+    params.path          = binaryfilename;
+    params.flags         = mapped_file::mapmode::readwrite;
 
+    stream<mapped_file> in(params);
+
+    boost::archive::binary_iarchive ia(in);
+
+    ia >> *Data_s;
 };
 
 void deserializer::deserializeStructFromSHM(UMGR_s *Data_s)

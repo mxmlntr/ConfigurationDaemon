@@ -68,7 +68,7 @@ uint8_t JSON_manager::parseToStructandSerialize(string filename) {
         data.checksum = crc.createCRC(get_json_config_string());
 
         //call the serialize and pass the struct to be serialized into a file
-        ser.serializeStructToFile(data, filename);
+        ser.serializeStructToFileMemMap(data, filename);
 
         //call the serialize and pass the struct to be serialized into SHM
         ser.serializeStructToSHM(data, filename);

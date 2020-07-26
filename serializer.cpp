@@ -16,7 +16,8 @@ void  serializer::serializeStructToFileMemMap(UMGR_s UnSerData, string filename)
 
     stream<mapped_file_sink> out(params);
 
-    boost::archive::binary_oarchive oa(out);
+    //boost::archive::binary_oarchive oa(out);
+    boost::archive::text_oarchive oa(out);
 
     oa << UnSerData;
 };

@@ -10,18 +10,41 @@ update_manager::update_manager()
     //create the messagequeue for synchronisation with the receiving process
     processMSGQUE.createQUEUE(filename);
 
-    //Set the filename for the deserializer
-    processDES.setfilename(filename);
+    //receive inital call from process if its already ready
+    int tmpmsg = processMSGQUE.receive_msg(1);
 
-    //Set the filenames for files associated with this process
-    file1.setfilename(filename);
-    file1.callJSON();
-    //file2.setfilename("ANYFILENAME");
-    //file2.callJSON();
+    if(tmpmsg == 1111)
+    {
+        //True if a new file is present or changed were made to that file
+        if (check_file_status())
+        {
+            //Set the filename/s for file/s associated with this process
+            file1.setfilename(filename);
+            file1.callJSON();
+            //file2.setfilename("ANYFILENAME");
+            //file2.callJSON();
 
-    int msg = 1337;
-    processMSGQUE.send_msg(msg,1);
-    cout << "Message received:" << processMSGQUE.receive_msg(1) << endl;
-
+            //Notify the process that the data is ready in SHM
+            processMSGQUE.send_msg(2222,1);
+        }
+        else
+        {
+            //Send msg that file is already serialized in file
+            processMSGQUE.send_msg(3333,1);
+        }
+    }
+    else
+    {
+        cout << "Connection to Process UMGR timed out." << endl;
+    }
+    tmpmsg = processMSGQUE.receive_msg(1);
+    if(tmpmsg == 9999)
+    {
+        cout << "UMGR Process called success." << endl;
+    }
+    else
+    {
+        cout << "UMGR Process called error while receiving data." << endl;
+    }
     processMSGQUE.destroyQUEUE(filename);
 };

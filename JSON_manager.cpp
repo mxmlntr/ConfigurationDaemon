@@ -67,12 +67,15 @@ uint8_t JSON_manager::parseToStructandSerialize(string filename) {
         //pass the config string, created from the struct to receive the checksum
         data.checksum = crc.createCRC(get_json_config_string());
 
+        //call the serialize and pass the struct to be serialized into SHM
+        ser.serializeStructToSHM(data, filename);
+
         //call the serialize and pass the struct to be serialized into a file
         ser.serializeStructToFileMemMap(data, filename);
 
-        //call the serialize and pass the struct to be serialized into SHM
-        ser.serializeStructToSHM(data, filename);
-    } else {
+    }
+    else
+    {
         //default case
         cout << "No Matching struct found." << endl;
     }

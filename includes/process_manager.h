@@ -9,6 +9,8 @@
 #include "file.h"
 #include "message_manager.h"
 
+//#define NEWFILE
+
 class process_manager {
 
 private:
@@ -16,6 +18,7 @@ private:
 public:
     message_manager processMSGQUE;
     deserializer processDES;
+    int check_file_status();
 };
 
 #endif //CONFIGURATION_DAEMON_PROCESS_MANAGER_H

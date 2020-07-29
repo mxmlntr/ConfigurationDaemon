@@ -11,7 +11,6 @@
 void file::setfilename(string file)
 {
     filename = file;
-
 };
 /*
  * Function for retreiving the JSON information from the file

@@ -7,7 +7,7 @@
 void  serializer::serializeStructToFileMemMap(UMGR_s UnSerData, string filename)
 {
     filename.erase(filename.length()-5 , 5);
-    string binaryfilename = "serial"+filename;
+    string binaryfilename = "/home/visxim/CLionProjects/ShareFolder/serial"+filename;
 
     mapped_file_params params;
     params.path          = binaryfilename;
@@ -16,15 +16,15 @@ void  serializer::serializeStructToFileMemMap(UMGR_s UnSerData, string filename)
 
     stream<mapped_file_sink> out(params);
 
-    //boost::archive::binary_oarchive oa(out);
-    boost::archive::text_oarchive oa(out);
+    boost::archive::binary_oarchive oa(out);
+    //boost::archive::text_oarchive oa(out);
 
     oa << UnSerData;
 };
 void  serializer::serializeStructToFile(UMGR_s UnSerData, string filename)
 {
     filename.erase(filename.length()-5 , 5);
-    string binaryfilename = "serial"+filename;
+    string binaryfilename = "/home/visxim/CLionProjects/ShareFolder/serial"+filename;
 
     /* DATA SERIALIZATION with standard file opening (ofstream) */
     // create and open a character archive for output

@@ -81,7 +81,7 @@ int message_manager::receive_msg(unsigned int priority)
     if(msgqueRECEIVE->timed_receive((void*) &message,sizeof(int),recvd_size,priority,
                                     boost::posix_time::ptime(microsec_clock::universal_time()) + boost::posix_time::milliseconds(9000)))
     {
-        cout << "Message successfully received." << endl;
+        //cout << "Message successfully received." << endl;
         return message;
     }
     else

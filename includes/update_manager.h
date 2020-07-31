@@ -7,6 +7,18 @@
 
 #include "process_manager.h"
 
+#define PRIORITY 1
+
+enum SyncMsg
+{
+    ProcessReady = 11,
+    DataRdySHM = 22,
+    DataRdyFile = 33,
+    DataReceiveSuccess = 44,
+    DataErrorCRC = 55,
+    ReceivingError = 66
+};
+
 class update_manager:public process_manager {
 
 private:

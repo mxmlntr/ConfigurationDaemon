@@ -48,7 +48,7 @@ void serializer::serializeStructToSHM(UMGR_s UnSerData, string filename)
     shared_memory_object::remove(SHMfilename.c_str());
     shared_memory_object shm(create_only, SHMfilename.c_str(), read_write);
 
-    shm.truncate(sizeof(UnSerData)); // 10MiB
+    shm.truncate(sizeof(UnSerData));
     mapped_region region(shm, read_write);
 
     bufferstream bs(std::ios::out);
@@ -57,4 +57,22 @@ void serializer::serializeStructToSHM(UMGR_s UnSerData, string filename)
 
     boost::archive::text_oarchive oa(bs);
     oa << UnSerData;
+};
+
+/*
+ * Not usable because memcpy does only work for POD and string is not a POD type
+ * */
+void serializer::copyStructToSHM(UMGR_s UnSerData, string filename)
+{
+    filename.erase(filename.length()-5 , 5);
+    string SHMfilename = "shm"+filename;
+
+    shared_memory_object::remove(SHMfilename.c_str());
+    shared_memory_object shm(create_only, SHMfilename.c_str(), read_write);
+
+    shm.truncate(sizeof(UnSerData));
+    mapped_region region(shm, read_write);
+
+    memcpy(region.get_address(),&UnSerData,sizeof(UnSerData));
+    cout << "Data copied to SHM." << endl;
 };

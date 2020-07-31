@@ -31,7 +31,6 @@ uint8_t JSON_manager::read_file(string filename)
 
 string JSON_manager::get_json_config_string()
 {
-    //cout<<doc["log_mode"].GetType();
     StringBuffer output;
     Writer<StringBuffer> writer(output);
     doc.Accept(writer);
@@ -47,7 +46,7 @@ uint8_t JSON_manager::parseToStructandSerialize(string filename) {
 
     if (!filename.compare("UMGR.json")) {
         //create the matching struct
-        static UMGR_s data;
+        UMGR_s data;
         //parse all the data into this struct
         data.name = doc["name"].GetString();
         data.description = doc["description"].GetString();
@@ -65,10 +64,13 @@ uint8_t JSON_manager::parseToStructandSerialize(string filename) {
         data.msg_buf_size = doc["msg_buf_size"].GetUint();
 
         //pass the config string, created from the struct to receive the checksum
-        data.checksum = crc.createCRC(get_json_config_string());
+        data.checksum = CRC.createCRC(&data);
 
         //call the serialize and pass the struct to be serialized into SHM
         ser.serializeStructToSHM(data, filename);
+
+        //not usable
+        //ser.copyStructToSHM(data,filename);
 
         //call the serialize and pass the struct to be serialized into a file
         ser.serializeStructToFileMemMap(data, filename);

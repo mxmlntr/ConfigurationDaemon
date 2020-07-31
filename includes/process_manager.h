@@ -9,7 +9,7 @@
 #include "file.h"
 #include "message_manager.h"
 
-//#define NEWFILE
+#define NEWFILE
 
 class process_manager {
 

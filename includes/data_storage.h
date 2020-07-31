@@ -21,10 +21,12 @@ typedef struct{
     string log_mode;
     string log_level;
     string log_dir_path;
-    uint ipc_port;
-    uint reconnection_retry_offset;
-    uint msg_buf_size;
-    int checksum;
+    unsigned int ipc_port;
+    unsigned int reconnection_retry_offset;
+    unsigned int msg_buf_size;
+    unsigned int checksum;
+    //char test0[20] = {"Hallo12345"};
+    //string test1 = "Hallo1234";
 
     //function for serializing the struct
     template <typename Archive>
@@ -40,6 +42,8 @@ typedef struct{
         ar & reconnection_retry_offset;
         ar & msg_buf_size;
         ar & checksum;
+        //ar & test0;
+        //ar & test1;
     }
 } UMGR_s;
 

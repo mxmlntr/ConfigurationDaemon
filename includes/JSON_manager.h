@@ -25,7 +25,7 @@ class JSON_manager{
 private:
     Document doc;
     serializer ser;
-    checksum_manager crc;
+    checksum_manager CRC;
 public:
     uint8_t read_file(string filename);
     string get_json_config_string();

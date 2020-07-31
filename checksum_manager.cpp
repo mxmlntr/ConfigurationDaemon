@@ -4,11 +4,19 @@
 
 #include "checksum_manager.h"
 
-int checksum_manager::createCRC(string crcString)
+int checksum_manager::createCRC(UMGR_s *CRCdata)
 {
-    boost::crc_32_type result;
-    result.process_bytes(crcString.data(), crcString.length());
-    return result.checksum();
+
+    //unsigned char *p = (unsigned char *)CRCdata;
+   // for (int i=0; i<sizeof(CRCdata); i++) {
+   //     cout << p[i] << endl;
+   // }
+    return 1;
+
+
+    //boost::crc_32_type result;
+    //result.process_bytes(crcString.data(), crcString.length());
+    //return result.checksum();
 
     /*
     boost::crc_32_type  result;

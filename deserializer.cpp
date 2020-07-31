@@ -67,6 +67,17 @@ void deserializer::deserializeStructFromSHM(UMGR_s *Data_s)
     ia >> *Data_s;
 };
 
+void deserializer::copyStructFromSHM(UMGR_s *Data_s)
+{
+    filename.erase(filename.length()-5 , 5);
+    string SHMfilename = "shm"+filename;
+
+    shared_memory_object shm(open_only, SHMfilename.c_str() , read_only);
+    mapped_region region(shm, read_only);
+
+    memcpy(Data_s,region.get_address(),sizeof(UMGR_s));
+};
+
 
 
 

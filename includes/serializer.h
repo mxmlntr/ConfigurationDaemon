@@ -1,10 +1,22 @@
-//
-// Created by visxim on 7/17/20.
-//
-
+/**********************************************************************************************************************
+ *  COPYRIGHT
+ *  -------------------------------------------------------------------------------------------------------------------
+ *
+ *  -------------------------------------------------------------------------------------------------------------------
+ *  FILE DESCRIPTION
+ *  -----------------------------------------------------------------------------------------------------------------*/
+/**        \file  /home/visxim/CLionProjects/Configuration_daemon/includes/serializer.h
+ *        \brief  Header of serializer for serializing the parsed configuration data
+ *
+ *      \details Serializer for serializing data to both shared memory and files
+ *
+ *
+ *********************************************************************************************************************/
 #ifndef CONFIGURATION_DAEMON_SERIALIZER_H
 #define CONFIGURATION_DAEMON_SERIALIZER_H
-
+/**********************************************************************************************************************
+ *  INCLUDES
+ *********************************************************************************************************************/
 #include <iostream>
 #include "data_storage.h"
 #include <boost/archive/text_oarchive.hpp>
@@ -18,6 +30,9 @@
 using namespace boost::interprocess;
 using namespace boost::iostreams;
 
+/*!
+ * \brief Class of serializer for handling data serialization to files and shared memorys
+ */
 class serializer{
 private:
 

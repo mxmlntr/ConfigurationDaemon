@@ -1,16 +1,32 @@
-//
-// Created by visxim on 7/15/20.
-//
-
+/**********************************************************************************************************************
+ *  COPYRIGHT
+ *  -------------------------------------------------------------------------------------------------------------------
+ *
+ *  -------------------------------------------------------------------------------------------------------------------
+ *  FILE DESCRIPTION
+ *  -----------------------------------------------------------------------------------------------------------------*/
+/**        \file  /home/visxim/CLionProjects/Configuration_daemon/includes/process_manager.h
+ *        \brief  Header of process_manager method definition
+ *
+ *      \details process_manager shall be used to create derived classes from it, it contains all the basic functions
+ *               which every derived class should have
+ *
+ *********************************************************************************************************************/
 #ifndef CONFIGURATION_DAEMON_PROCESS_MANAGER_H
 #define CONFIGURATION_DAEMON_PROCESS_MANAGER_H
-
+/**********************************************************************************************************************
+ *  INCLUDES
+ *********************************************************************************************************************/
 #include "deserializer.h"
 #include "file.h"
 #include "message_manager.h"
 
+//! Defines if a new file is present (also see check_file_status())
 #define NEWFILE
 
+/*!
+ * \brief Class for all basic members needed in the derived classes
+ */
 class process_manager {
 
 private:

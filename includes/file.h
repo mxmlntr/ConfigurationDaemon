@@ -1,16 +1,29 @@
-//
-// Created by visxim on 7/10/20.
-//
-
+/**********************************************************************************************************************
+ *  COPYRIGHT
+ *  -------------------------------------------------------------------------------------------------------------------
+ *
+ *  -------------------------------------------------------------------------------------------------------------------
+ *  FILE DESCRIPTION
+ *  -----------------------------------------------------------------------------------------------------------------*/
+/**        \file  /home/visxim/CLionProjects/Configuration_daemon/includes/file.h
+ *        \brief  Header of file methods for file handling
+ *
+ *      \details The file is for accessing the files with the configurations
+ *
+ *********************************************************************************************************************/
 #ifndef CONFIGURATION_DAEMON_FILE_H
 #define CONFIGURATION_DAEMON_FILE_H
-
+/**********************************************************************************************************************
+ *  INCLUDES
+ *********************************************************************************************************************/
 #include "JSON_manager.h"
 
 using namespace std;
 
-class file
-{
+/*!
+ * \brief File class for handling file access
+ */
+class file{
 private:
     string filename;
 public:
@@ -20,6 +33,5 @@ public:
 
 
 };
-
 
 #endif //CONFIGURATION_DAEMON_FILE_H

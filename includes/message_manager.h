@@ -1,10 +1,22 @@
-//
-// Created by visxim on 7/21/20.
-//
-
+/**********************************************************************************************************************
+ *  COPYRIGHT
+ *  -------------------------------------------------------------------------------------------------------------------
+ *
+ *  -------------------------------------------------------------------------------------------------------------------
+ *  FILE DESCRIPTION
+ *  -----------------------------------------------------------------------------------------------------------------*/
+/**        \file  /home/visxim/CLionProjects/Configuration_daemon/includes/message_manager.h
+ *        \brief  Header of Message_manager for managing the synchronization between processes
+ *
+ *      \details The Message_manager managed all synchronization between processes via message queue
+ *
+ *
+ *********************************************************************************************************************/
 #ifndef CONFIGURATION_DAEMON_MESSAGE_MANAGER_H
 #define CONFIGURATION_DAEMON_MESSAGE_MANAGER_H
-
+/**********************************************************************************************************************
+ *  INCLUDES
+ *********************************************************************************************************************/
 #include <iostream>
 #include "boost/interprocess/ipc/message_queue.hpp"
 #include "boost/scoped_ptr.hpp"
@@ -12,6 +24,9 @@
 
 using namespace boost::interprocess;
 
+/*!
+ * \brief Class of message manager which handles the synchronization between processes
+ */
 class message_manager
 {
 private:

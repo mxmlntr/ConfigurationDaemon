@@ -1,12 +1,27 @@
-//
-// Created by visxim on 7/17/20.
-//
+/**********************************************************************************************************************
+ *  COPYRIGHT
+ *  -------------------------------------------------------------------------------------------------------------------
+ *
+ *  -------------------------------------------------------------------------------------------------------------------
+ *  FILE DESCRIPTION
+ *  -----------------------------------------------------------------------------------------------------------------*/
+/**        \file  /home/visxim/CLionProjects/Configuration_daemon/checksum_manager.cpp
+ *        \brief  Checksum_manager for checking the integrity of the data
+ *
+ *      \details The Checksum_manager creates and checks if the data is valid
+ *
+ *
+ *********************************************************************************************************************/
 
+/**********************************************************************************************************************
+ *  INCLUDES
+ *********************************************************************************************************************/
 #include "checksum_manager.h"
 
-/*
- * Needs to be overloaded for different data structures
+/*!
+ * \brief Function for creating the checksum
  *
+ * Needs to be overloaded for different data structures
  * */
 int checksum_manager::createCRC(UMGR_s *CRCdata)
 {
@@ -17,4 +32,14 @@ int checksum_manager::createCRC(UMGR_s *CRCdata)
     cout << result.checksum() << endl;
 
     return result.checksum();
+};
+
+/*!
+ * \brief Function for checking the checksum
+ *
+ * Needs to be overloaded for different data structures
+ * */
+int checksum_manager::checkCRC(UMGR_s *CRCdata)
+{
+
 };

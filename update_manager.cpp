@@ -1,39 +1,71 @@
-//
-// Created by visxim on 7/15/20.
-//
+/**********************************************************************************************************************
+ *  COPYRIGHT
+ *  -------------------------------------------------------------------------------------------------------------------
+ *
+ *  -------------------------------------------------------------------------------------------------------------------
+ *  FILE DESCRIPTION
+ *  -----------------------------------------------------------------------------------------------------------------*/
+/**        \file  /home/visxim/CLionProjects/Configuration_daemon/update_manager.cpp
+ *        \brief  update_manager method definition
+ *
+ *      \details The update_manager is derived from the process_manager, it is created to specifically configure the
+ *               the update_manager process
+ *
+ *********************************************************************************************************************/
 
+/**********************************************************************************************************************
+ *  INCLUDES
+ *********************************************************************************************************************/
 #include "update_manager.h"
 
-//Constructor which initializes all the update_manager-specific values
+/*!
+* \brief Constructor which initializes all the update_manager-specific values
+*
+* This constructor creates all necessary objects for the configuration of the update manager
+*
+*/
 update_manager::update_manager()
 {
-    //create the messagequeue for synchronisation with the receiving process
+    //! Create the messagequeue for synchronisation with the receiving process
     processMSGQUE.createQUEUE(filename);
 
+    //! Receive the first message from the update manager process
     int tmpmsg = processMSGQUE.receive_msg(PRIORITY);
 
+    //! Check if the process calles "ready"
     if (tmpmsg == ProcessReady)
     {
         cout << "Process  UMGR called ready." << endl;
-        //True if a new file is present or changed were made to that file
-        if (check_file_status()) {
-            //Set the filename/s for file/s associated with this process
+        /*!
+         *  True if a new file is present or changed were made to that file
+         *  False if the file isnt new and no changes were made it
+         *  That means that the file has been already serialized with the current configuration
+         *  and the update manager process is notified that it shall receive the configuration from
+         *  the binary file
+         */
+        if (check_file_status())
+        {
+            //!Set the filename/s for file/s associated with this process
             file1.setfilename(filename);
             file1.callJSON();
+            //!Dummy files
             //file2.setfilename("ANYFILENAME");
             //file2.callJSON();
 
-            //Notify the process that the data is ready in SHM
+            //!Notify the process that the data is ready in SHM
             processMSGQUE.send_msg(DataRdySHM, PRIORITY);
         }
         else
         {
-            //Send msg that file is already serialized in file
+            //!Send msg that file is already serialized in file
             processMSGQUE.send_msg(DataRdyFile, PRIORITY);
         }
         tmpmsg = processMSGQUE.receive_msg(PRIORITY);
     }
 
+    /*!
+     *  Switch case which evaluates the answer from the update manager process
+     */
     switch (tmpmsg)
     {
         case ProcessTimeout:
@@ -56,5 +88,6 @@ update_manager::update_manager()
             break;
     }
 
+    //! There can be an implementation after the answer has been evaluated, otherwise destroy the message queue
     processMSGQUE.destroyQUEUE(filename);
 };

@@ -6,9 +6,9 @@
  *  FILE DESCRIPTION
  *  -----------------------------------------------------------------------------------------------------------------*/
 /**        \file  /home/visxim/CLionProjects/Configuration_daemon/includes/message_manager.h
- *        \brief  Header of Message_manager for managing the synchronization between processes
+ *        \brief  Header of message_manager for managing the synchronization between processes
  *
- *      \details The Message_manager managed all synchronization between processes via message queue
+ *      \details The message_manager managed all synchronization between processes via message queue
  *
  *
  *********************************************************************************************************************/
@@ -42,7 +42,5 @@ public:
     size_t CheckNumOfMsgSEND();
     size_t CheckNumOfMsgRECEIVE();
 };
-
-
 
 #endif //CONFIGURATION_DAEMON_MESSAGE_QUEUE_H

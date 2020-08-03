@@ -23,10 +23,12 @@
 
 using namespace std;
 
+#pragma pack(16)
+
 /*!
  * \brief Struct which is specified to hold the values of the UpdateManager UMGR
  */
-typedef struct{
+typedef struct {
     string name;
     string description;
     string dlt_id;
@@ -52,8 +54,6 @@ typedef struct{
         ar & reconnection_retry_offset;
         ar & msg_buf_size;
         ar & checksum;
-        //ar & test0;
-        //ar & test1;
     }
 } UMGR_s;
 

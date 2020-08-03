@@ -27,9 +27,9 @@ private:
     serializer ser;
     checksum_manager CRC;
 public:
-    uint8_t read_file(string filename);
+    unsigned int read_file(string filename);
     string get_json_config_string();
-    uint8_t parseToStructandSerialize(string filename);
+    unsigned int parseToStructandSerialize(string filename);
 };
 
 

@@ -24,7 +24,7 @@ typedef struct{
     unsigned int ipc_port;
     unsigned int reconnection_retry_offset;
     unsigned int msg_buf_size;
-    unsigned int checksum;
+    int checksum;
     //char test0[20] = {"Hallo12345"};
     //string test1 = "Hallo1234";
 

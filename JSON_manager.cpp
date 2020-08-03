@@ -4,19 +4,21 @@
 
 #include "JSON_manager.h"
 
-uint8_t JSON_manager::read_file(string filename)
+unsigned int JSON_manager::read_file(string filename)
 {
     string buf;
     string json;
 
-    ifstream test (filename);
-    if (test.is_open())
+    string binaryfilename = "/home/visxim/CLionProjects/ShareFolder/"+filename;
+
+    ifstream fileInputStream (binaryfilename);
+    if (fileInputStream.is_open())
     {
-        while ( getline (test,buf) )
+        while ( getline (fileInputStream,buf) )
         {
             json.append(buf);
         }
-        test.close();
+        fileInputStream.close();
     }
     else cout << "Unable to open file\n";
 
@@ -42,9 +44,11 @@ string JSON_manager::get_json_config_string()
  * Function for parsing the interpreted JSON data from the file into a predefinied struct (to find in data_storage.h)
  *
  * */
-uint8_t JSON_manager::parseToStructandSerialize(string filename) {
+unsigned int JSON_manager::parseToStructandSerialize(string filename)
+{
 
-    if (!filename.compare("UMGR.json")) {
+    if (!filename.compare("UMGR.json"))
+    {
         //create the matching struct
         UMGR_s data;
         //parse all the data into this struct
@@ -62,6 +66,8 @@ uint8_t JSON_manager::parseToStructandSerialize(string filename) {
         data.ipc_port = doc["ipc_port"].GetUint();
         data.reconnection_retry_offset = doc["reconnection_retry_offset"].GetUint();
         data.msg_buf_size = doc["msg_buf_size"].GetUint();
+
+        cout << "JSON-file transfered into struct." << endl;
 
         //pass the config string, created from the struct to receive the checksum
         data.checksum = CRC.createCRC(&data);

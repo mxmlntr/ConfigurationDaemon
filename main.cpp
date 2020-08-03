@@ -9,7 +9,6 @@ update_manager UMGR_object;
 
 int main(int argc, char **argv)
 {
-
     return 0;
 }
 

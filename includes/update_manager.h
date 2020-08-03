@@ -11,12 +11,14 @@
 
 enum SyncMsg
 {
+    ProcessTimeout = 00,
     ProcessReady = 11,
     DataRdySHM = 22,
     DataRdyFile = 33,
     DataReceiveSuccess = 44,
     DataErrorCRC = 55,
-    ReceivingError = 66
+    ReceivingError = 66,
+    DaemonTimeout = 77
 };
 
 class update_manager:public process_manager {

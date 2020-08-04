@@ -20,10 +20,9 @@
 #include <fstream>
 #include <string>
 #include <stdint.h>
+#include "boost/crc.hpp"
 
 using namespace std;
-
-#pragma pack(16)
 
 /*!
  * \brief Struct which is specified to hold the values of the UpdateManager UMGR

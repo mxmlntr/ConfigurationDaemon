@@ -30,8 +30,6 @@ public:
     JSON_manager fileJSONmng;
     void setfilename(string file);
     void callJSON();
-
-
 };
 
 #endif //CONFIGURATION_DAEMON_FILE_H

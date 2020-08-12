@@ -22,7 +22,7 @@
 #include "message_manager.h"
 
 //! Defines if a new file is present (also see check_file_status())
-//#define NEWFILE
+#define NEWFILE
 
 /*!
  * \brief Class for all basic members needed in the derived classes

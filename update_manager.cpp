@@ -29,7 +29,7 @@ update_manager::update_manager()
     //! Create the messagequeue for synchronisation with the receiving process
     processMSGQUE.createQUEUE(filename);
 
-    //! Receive the first message from the update manager process
+    //! Receive the first meassage from the update manager process
     int tmpmsg = processMSGQUE.receive_msg(PRIORITY);
 
     //! Check if the process calles "ready"

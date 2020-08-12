@@ -18,6 +18,7 @@
  *  INCLUDES
  *********************************************************************************************************************/
 #include "process_manager.h"
+#include "hello-tp.h"
 
 //! Defines the priority of the messages in the message queues
 #define PRIORITY 1

@@ -231,33 +231,6 @@ file.cpp.s:
 	$(MAKE) -f CMakeFiles/Configuration_daemon.dir/build.make CMakeFiles/Configuration_daemon.dir/file.cpp.s
 .PHONY : file.cpp.s
 
-hello-tp.o: hello-tp.c.o
-
-.PHONY : hello-tp.o
-
-# target to build an object file
-hello-tp.c.o:
-	$(MAKE) -f CMakeFiles/Configuration_daemon.dir/build.make CMakeFiles/Configuration_daemon.dir/hello-tp.c.o
-.PHONY : hello-tp.c.o
-
-hello-tp.i: hello-tp.c.i
-
-.PHONY : hello-tp.i
-
-# target to preprocess a source file
-hello-tp.c.i:
-	$(MAKE) -f CMakeFiles/Configuration_daemon.dir/build.make CMakeFiles/Configuration_daemon.dir/hello-tp.c.i
-.PHONY : hello-tp.c.i
-
-hello-tp.s: hello-tp.c.s
-
-.PHONY : hello-tp.s
-
-# target to generate assembly for a file
-hello-tp.c.s:
-	$(MAKE) -f CMakeFiles/Configuration_daemon.dir/build.make CMakeFiles/Configuration_daemon.dir/hello-tp.c.s
-.PHONY : hello-tp.c.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -420,32 +393,32 @@ shared_memory.cpp.s:
 	$(MAKE) -f CMakeFiles/Configuration_daemon.dir/build.make CMakeFiles/Configuration_daemon.dir/shared_memory.cpp.s
 .PHONY : shared_memory.cpp.s
 
-tracepoint_provider.o: tracepoint_provider.cpp.o
+time-tp.o: time-tp.c.o
 
-.PHONY : tracepoint_provider.o
+.PHONY : time-tp.o
 
 # target to build an object file
-tracepoint_provider.cpp.o:
-	$(MAKE) -f CMakeFiles/Configuration_daemon.dir/build.make CMakeFiles/Configuration_daemon.dir/tracepoint_provider.cpp.o
-.PHONY : tracepoint_provider.cpp.o
+time-tp.c.o:
+	$(MAKE) -f CMakeFiles/Configuration_daemon.dir/build.make CMakeFiles/Configuration_daemon.dir/time-tp.c.o
+.PHONY : time-tp.c.o
 
-tracepoint_provider.i: tracepoint_provider.cpp.i
+time-tp.i: time-tp.c.i
 
-.PHONY : tracepoint_provider.i
+.PHONY : time-tp.i
 
 # target to preprocess a source file
-tracepoint_provider.cpp.i:
-	$(MAKE) -f CMakeFiles/Configuration_daemon.dir/build.make CMakeFiles/Configuration_daemon.dir/tracepoint_provider.cpp.i
-.PHONY : tracepoint_provider.cpp.i
+time-tp.c.i:
+	$(MAKE) -f CMakeFiles/Configuration_daemon.dir/build.make CMakeFiles/Configuration_daemon.dir/time-tp.c.i
+.PHONY : time-tp.c.i
 
-tracepoint_provider.s: tracepoint_provider.cpp.s
+time-tp.s: time-tp.c.s
 
-.PHONY : tracepoint_provider.s
+.PHONY : time-tp.s
 
 # target to generate assembly for a file
-tracepoint_provider.cpp.s:
-	$(MAKE) -f CMakeFiles/Configuration_daemon.dir/build.make CMakeFiles/Configuration_daemon.dir/tracepoint_provider.cpp.s
-.PHONY : tracepoint_provider.cpp.s
+time-tp.c.s:
+	$(MAKE) -f CMakeFiles/Configuration_daemon.dir/build.make CMakeFiles/Configuration_daemon.dir/time-tp.c.s
+.PHONY : time-tp.c.s
 
 update_manager.o: update_manager.cpp.o
 
@@ -495,9 +468,6 @@ help:
 	@echo "... file.o"
 	@echo "... file.i"
 	@echo "... file.s"
-	@echo "... hello-tp.o"
-	@echo "... hello-tp.i"
-	@echo "... hello-tp.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -516,9 +486,9 @@ help:
 	@echo "... shared_memory.o"
 	@echo "... shared_memory.i"
 	@echo "... shared_memory.s"
-	@echo "... tracepoint_provider.o"
-	@echo "... tracepoint_provider.i"
-	@echo "... tracepoint_provider.s"
+	@echo "... time-tp.o"
+	@echo "... time-tp.i"
+	@echo "... time-tp.s"
 	@echo "... update_manager.o"
 	@echo "... update_manager.i"
 	@echo "... update_manager.s"

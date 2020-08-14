@@ -70,6 +70,7 @@ string JSON_manager::get_json_config_string()
  * */
 unsigned int JSON_manager::parseToStructandSerialize(string filename)
 {
+
     //! compare the filename to find the right implementation
     if (!filename.compare("UMGR.json"))
     {
@@ -93,17 +94,32 @@ unsigned int JSON_manager::parseToStructandSerialize(string filename)
 
         cout << "JSON-file transfered into struct." << endl;
 
+#ifdef TRACE
+        tracepoint(tp_provider, time_tracepoint_daemon, 3);
+#endif
+
         //!pass the config string, created from the struct to receive the checksum
         data.checksum = CRC.createCRC(&data);
+
+#ifdef TRACE
+        tracepoint(tp_provider, time_tracepoint_daemon, 4);
+#endif
 
         //!call the serialize and pass the struct to be serialized into SHM
         ser.serializeStructToSHM(data, filename);
 
+#ifdef TRACE
+        tracepoint(tp_provider, time_tracepoint_daemon, 5);
+#endif
         //!not usable see function for details
         //ser.copyStructToSHM(data,filename);
 
         //!call the serialize and pass the struct to be serialized into a file
         ser.serializeStructToFileMemMap(data, filename);
+
+#ifdef TRACE
+        tracepoint(tp_provider, time_tracepoint_daemon, 6);
+#endif
 
     }
     else

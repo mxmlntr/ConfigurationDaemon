@@ -26,11 +26,18 @@
 */
 update_manager::update_manager()
 {
+#ifdef TRACE
+    tracepoint(tp_provider, time_tracepoint_daemon, 1);
+#endif
     //! Create the messagequeue for synchronisation with the receiving process
     processMSGQUE.createQUEUE(filename);
 
     //! Receive the first meassage from the update manager process
     int tmpmsg = processMSGQUE.receive_msg(PRIORITY);
+
+#ifdef TRACE
+    tracepoint(tp_provider, time_tracepoint_daemon, 2);
+#endif
 
     //! Check if the process calles "ready"
     if (tmpmsg == ProcessReady)
@@ -45,9 +52,11 @@ update_manager::update_manager()
          */
         if (check_file_status())
         {
+
             //!Set the filename/s for file/s associated with this process
             file1.setfilename(filename);
             file1.callJSON();
+
             //!Dummy files
             //file2.setfilename("ANYFILENAME");
             //file2.callJSON();
@@ -62,7 +71,9 @@ update_manager::update_manager()
         }
         tmpmsg = processMSGQUE.receive_msg(PRIORITY);
     }
-
+#ifdef TRACE
+    tracepoint(tp_provider, time_tracepoint_daemon, 7);
+#endif
     /*!
      *  Switch case which evaluates the answer from the update manager process
      */

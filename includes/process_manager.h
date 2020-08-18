@@ -24,6 +24,9 @@
 //! Defines if a new file is present (also see check_file_status())
 //#define NEWFILE
 
+//! Defines the priority of the messages in the message queues
+#define PRIORITY 1
+
 /*!
  * \brief Class for all basic members needed in the derived classes
  */

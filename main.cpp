@@ -18,6 +18,7 @@
 #include "update_manager.h"
 #include "time-tp.h"
 
+
 /**********************************************************************************************************************
  *  OBJECT DECLARATION
  *********************************************************************************************************************/
@@ -30,6 +31,9 @@
 
 int main(int argc, char **argv)
 {
+#if defined(TRACENEWFILE) || defined(TRACEOLDFILE)
+    tracepoint(tp_provider, time_tracepoint_daemon, 0);
+#endif
     update_manager UMGR_object;
     return 0;
 }

@@ -20,9 +20,6 @@
 #include "process_manager.h"
 #include "time-tp.h"
 
-//! Defines the priority of the messages in the message queues
-#define PRIORITY 1
-
 //! Enum for synchronization via message queue
 enum SyncMsg
 {

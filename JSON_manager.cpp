@@ -94,32 +94,28 @@ unsigned int JSON_manager::parseToStructandSerialize(string filename)
 
         cout << "JSON-file transfered into struct." << endl;
 
-#ifdef TRACE
-        tracepoint(tp_provider, time_tracepoint_daemon, 3);
+#ifdef TRACENEWFILE
+        tracepoint(tp_provider, time_tracepoint_daemon, 2);
 #endif
 
         //!pass the config string, created from the struct to receive the checksum
         data.checksum = CRC.createCRC(&data);
 
-#ifdef TRACE
-        tracepoint(tp_provider, time_tracepoint_daemon, 4);
+#ifdef TRACENEWFILE
+        tracepoint(tp_provider, time_tracepoint_daemon, 3);
 #endif
 
         //!call the serialize and pass the struct to be serialized into SHM
         ser.serializeStructToSHM(data, filename);
 
-#ifdef TRACE
-        tracepoint(tp_provider, time_tracepoint_daemon, 5);
+#ifdef TRACENEWFILE
+        tracepoint(tp_provider, time_tracepoint_daemon, 4);
 #endif
         //!not usable see function for details
         //ser.copyStructToSHM(data,filename);
 
         //!call the serialize and pass the struct to be serialized into a file
         ser.serializeStructToFileMemMap(data, filename);
-
-#ifdef TRACE
-        tracepoint(tp_provider, time_tracepoint_daemon, 6);
-#endif
 
     }
     else

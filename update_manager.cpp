@@ -26,18 +26,12 @@
 */
 update_manager::update_manager()
 {
-#ifdef TRACE
-    tracepoint(tp_provider, time_tracepoint_daemon, 1);
-#endif
+
     //! Create the messagequeue for synchronisation with the receiving process
     processMSGQUE.createQUEUE(filename);
 
     //! Receive the first meassage from the update manager process
     int tmpmsg = processMSGQUE.receive_msg(PRIORITY);
-
-#ifdef TRACE
-    tracepoint(tp_provider, time_tracepoint_daemon, 2);
-#endif
 
     //! Check if the process calles "ready"
     if (tmpmsg == ProcessReady)
@@ -52,7 +46,9 @@ update_manager::update_manager()
          */
         if (check_file_status())
         {
-
+#ifdef TRACENEWFILE
+            tracepoint(tp_provider, time_tracepoint_daemon, 1);
+#endif
             //!Set the filename/s for file/s associated with this process
             file1.setfilename(filename);
             file1.callJSON();
@@ -60,19 +56,27 @@ update_manager::update_manager()
             //!Dummy files
             //file2.setfilename("ANYFILENAME");
             //file2.callJSON();
-
+#ifdef TRACENEWFILE
+            tracepoint(tp_provider, time_tracepoint_daemon, 5);
+#endif
             //!Notify the process that the data is ready in SHM
             processMSGQUE.send_msg(DataRdySHM, PRIORITY);
         }
         else
         {
+#ifdef TRACEOLDFILE
+            tracepoint(tp_provider, time_tracepoint_daemon, 1);
+#endif
             //!Send msg that file is already serialized in file
             processMSGQUE.send_msg(DataRdyFile, PRIORITY);
         }
         tmpmsg = processMSGQUE.receive_msg(PRIORITY);
     }
-#ifdef TRACE
-    tracepoint(tp_provider, time_tracepoint_daemon, 7);
+#ifdef TRACENEWFILE
+    tracepoint(tp_provider, time_tracepoint_daemon, 9);
+#endif
+#ifdef TRACEOLDFILE
+    tracepoint(tp_provider, time_tracepoint_daemon, 5);
 #endif
     /*!
      *  Switch case which evaluates the answer from the update manager process
@@ -98,6 +102,13 @@ update_manager::update_manager()
             cout << "UMGR Process replied with unknown message:" << tmpmsg << endl;
             break;
     }
+
+#ifdef TRACENEWFILE
+    tracepoint(tp_provider, time_tracepoint_daemon, 10);
+#endif
+#ifdef TRACEOLDFILE
+    tracepoint(tp_provider, time_tracepoint_daemon, 6);
+#endif
 
     //! There can be an implementation after the answer has been evaluated, otherwise destroy the message queue
     processMSGQUE.destroyQUEUE(filename);

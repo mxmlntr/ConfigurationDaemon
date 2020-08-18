@@ -9,6 +9,10 @@
 
 #include <lttng/tracepoint.h>
 
+//! Defines if tracing is enabled
+//#define TRACENEWFILE
+#define TRACEOLDFILE
+
 TRACEPOINT_EVENT(
         tp_provider,
         time_tracepoint_daemon,

@@ -85,7 +85,6 @@ unsigned int JSON_manager::parseToStructandSerialize(string filename)
         data.ipc_port = doc["ipc_port"].GetUint();
         data.reconnection_retry_offset = doc["reconnection_retry_offset"].GetUint();
         data.msg_buf_size = doc["msg_buf_size"].GetUint();
-        data.test = doc["test"].GetString();
 
         cout << "JSON-file transfered into struct." << endl;
 

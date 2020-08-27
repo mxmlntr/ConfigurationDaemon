@@ -5,8 +5,8 @@
  *  -------------------------------------------------------------------------------------------------------------------
  *  FILE DESCRIPTION
  *  -----------------------------------------------------------------------------------------------------------------*/
-/**        \file  /home/visxim/CLionProjects/Configuration_daemon/update_manager.cpp
- *        \brief  update_manager method definition
+/**        \file  /home/visxim/CLionProjects/Configuration_daemon/EXMPLE.cpp
+ *        \brief  EXMPLE method definition
  *
  *      \details The update_manager is derived from the process_manager, it is created to specifically configure the
  *               the update_manager process
@@ -16,7 +16,7 @@
 /**********************************************************************************************************************
  *  INCLUDES
  *********************************************************************************************************************/
-#include "update_manager.h"
+#include "EXMPLE.h"
 
 /*!
 * \brief Constructor which initializes all the update_manager-specific values
@@ -24,9 +24,8 @@
 * This constructor creates all necessary objects for the configuration of the update manager
 *
 */
-update_manager::update_manager()
+EXMPLE::EXMPLE()
 {
-
     //! Create the messagequeue for synchronisation with the receiving process
     processMSGQUE.createQUEUE(filename);
 
@@ -53,9 +52,6 @@ update_manager::update_manager()
             file1.setfilename(filename);
             file1.callJSON();
 
-            //!Dummy files
-            //file2.setfilename("ANYFILENAME");
-            //file2.callJSON();
 #ifdef TRACENEWFILE
             tracepoint(tp_provider, time_tracepoint_daemon_new, 5);
 #endif

@@ -21,8 +21,21 @@
 #include "file.h"
 #include "message_manager.h"
 
+//! Enum for synchronization via message queue
+enum SyncMsg
+{
+    ProcessTimeout = 00,
+    ProcessReady = 11,
+    DataRdySHM = 22,
+    DataRdyFile = 33,
+    DataReceiveSuccess = 44,
+    DataErrorCRC = 55,
+    ReceivingError = 66,
+    DaemonTimeout = 77
+};
+
 //! Defines if a new file is present (also see check_file_status())
-//#define NEWFILE
+#define NEWFILE
 
 //! Defines the priority of the messages in the message queues
 #define PRIORITY 1

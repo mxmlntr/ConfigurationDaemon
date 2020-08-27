@@ -16,13 +16,13 @@
  *  INCLUDES
  *********************************************************************************************************************/
 #include "update_manager.h"
+#include "EXMPLE.h"
 #include "time-tp.h"
 
 
 /**********************************************************************************************************************
  *  OBJECT DECLARATION
  *********************************************************************************************************************/
-
 
 /*!
 * \brief main function
@@ -31,9 +31,13 @@
 
 int main(int argc, char **argv)
 {
-#if defined(TRACENEWFILE) || defined(TRACEOLDFILE)
-    tracepoint(tp_provider, time_tracepoint_daemon, 0);
+#if defined(TRACEOLDFILE)
+    tracepoint(tp_provider, time_tracepoint_daemon_old, 0);
 #endif
-    update_manager UMGR_object;
+#if defined(TRACENEWFILE)
+    tracepoint(tp_provider, time_tracepoint_daemon_new, 0);
+#endif
+    //update_manager UMGR_object;
+    EXMPLE EXMPLE_object;
     return 0;
 }

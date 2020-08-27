@@ -5,15 +5,15 @@
  *  -------------------------------------------------------------------------------------------------------------------
  *  FILE DESCRIPTION
  *  -----------------------------------------------------------------------------------------------------------------*/
-/**        \file  /home/visxim/CLionProjects/Configuration_daemon/includes/update_manager.h
- *        \brief  Header of update_manager method definition
+/**        \file  /home/visxim/CLionProjects/Configuration_daemon/includes/EXMPLE.h
+ *        \brief  Header of EXMPLE method definition
  *
  *      \details The update_manager is derived from the process_manager, it is created to specifically configure the
  *               the update_manager process
  *
  *********************************************************************************************************************/
-#ifndef CONFIGURATION_DAEMON_UPDATE_MANAGER_H
-#define CONFIGURATION_DAEMON_UPDATE_MANAGER_H
+#ifndef CONFIGURATION_DAEMON_EXMPLE_H
+#define CONFIGURATION_DAEMON_EXMPLE_H
 /**********************************************************************************************************************
  *  INCLUDES
  *********************************************************************************************************************/
@@ -23,14 +23,13 @@
 /*!
  * \brief Derived class process manager
  */
-class update_manager:public process_manager {
+class EXMPLE:public process_manager {
 
 private:
-    string filename = "UMGR.json";
+    string filename = "EXMPLE.json";
 public:
-    update_manager();
+    EXMPLE();
     file file1;
-    //file file2;
 };
 
 #endif //CONFIGURATION_DAEMON_UPDATE_MANAGER_H

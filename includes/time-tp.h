@@ -10,12 +10,13 @@
 #include <lttng/tracepoint.h>
 
 //! Defines if tracing is enabled
+//! This define depends on define NEWFILE from process_manager.h
 //#define TRACENEWFILE
-#define TRACEOLDFILE
+//#define TRACEOLDFILE
 
 TRACEPOINT_EVENT(
         tp_provider,
-        time_tracepoint_daemon,
+        time_tracepoint_daemon_old,
         TP_ARGS(
                 int, probe_nr
         ),
@@ -26,12 +27,12 @@ TRACEPOINT_EVENT(
 
 TRACEPOINT_EVENT(
         tp_provider,
-        overall_time_tracepoint,
+        time_tracepoint_daemon_new,
         TP_ARGS(
-
+                int, probe_nr
         ),
         TP_FIELDS(
-
+                ctf_integer(int, probeNumber, probe_nr)
         )
 )
 

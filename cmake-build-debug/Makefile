@@ -123,6 +123,33 @@ Configuration_daemon/fast:
 	$(MAKE) -f CMakeFiles/Configuration_daemon.dir/build.make CMakeFiles/Configuration_daemon.dir/build
 .PHONY : Configuration_daemon/fast
 
+EXMPLE.o: EXMPLE.cpp.o
+
+.PHONY : EXMPLE.o
+
+# target to build an object file
+EXMPLE.cpp.o:
+	$(MAKE) -f CMakeFiles/Configuration_daemon.dir/build.make CMakeFiles/Configuration_daemon.dir/EXMPLE.cpp.o
+.PHONY : EXMPLE.cpp.o
+
+EXMPLE.i: EXMPLE.cpp.i
+
+.PHONY : EXMPLE.i
+
+# target to preprocess a source file
+EXMPLE.cpp.i:
+	$(MAKE) -f CMakeFiles/Configuration_daemon.dir/build.make CMakeFiles/Configuration_daemon.dir/EXMPLE.cpp.i
+.PHONY : EXMPLE.cpp.i
+
+EXMPLE.s: EXMPLE.cpp.s
+
+.PHONY : EXMPLE.s
+
+# target to generate assembly for a file
+EXMPLE.cpp.s:
+	$(MAKE) -f CMakeFiles/Configuration_daemon.dir/build.make CMakeFiles/Configuration_daemon.dir/EXMPLE.cpp.s
+.PHONY : EXMPLE.cpp.s
+
 JSON_manager.o: JSON_manager.cpp.o
 
 .PHONY : JSON_manager.o
@@ -456,6 +483,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Configuration_daemon"
+	@echo "... EXMPLE.o"
+	@echo "... EXMPLE.i"
+	@echo "... EXMPLE.s"
 	@echo "... JSON_manager.o"
 	@echo "... JSON_manager.i"
 	@echo "... JSON_manager.s"

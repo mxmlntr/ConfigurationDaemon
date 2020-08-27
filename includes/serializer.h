@@ -26,6 +26,7 @@
 #include <boost/interprocess/managed_shared_memory.hpp>
 #include <boost/iostreams/device/mapped_file.hpp>
 #include <boost/iostreams/stream.hpp>
+#include <boost/serialization/vector.hpp>
 
 using namespace boost::interprocess;
 using namespace boost::iostreams;
@@ -37,9 +38,19 @@ class serializer{
 private:
 
 public:
-    void serializeStructToFile(UMGR_s UnSerData, string filename);
+
+    //!This method is overlaoded for every struct in data_storage
     void serializeStructToFileMemMap(UMGR_s UnSerData, string filename);
+    void serializeStructToFileMemMap(EXMPLE_s UnSerData, string filename);
+
+    //!This method is overlaoded for every struct in data_storage
     void serializeStructToSHM(UMGR_s UnSerData, string filename);
+    void serializeStructToSHM(EXMPLE_s UnSerData, string filename);
+
+    //!Replaced by MemMap implementation
+    void serializeStructToFile(UMGR_s UnSerData, string filename);
+
+    //!unusable
     void copyStructToSHM(UMGR_s UnSerData, string filename);
 };
 

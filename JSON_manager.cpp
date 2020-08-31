@@ -119,9 +119,9 @@ unsigned int JSON_manager::parseToStructandSerialize(string filename)
     }
     else if (!filename.compare("EXMPLE.json"))
     {
-            //!create the matching struct
-            EXMPLE_s data;
-            //!parse all the data into this struct
+        //!create the matching struct
+        EXMPLE_s data;
+        //!parse all the data into this struct
         data.name0 = doc["name0"].GetString();
         data.description1 = doc["description1"].GetString();
         data.mode2 = doc["mode2"].GetString();

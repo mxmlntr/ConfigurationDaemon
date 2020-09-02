@@ -11,8 +11,8 @@
 
 //! Defines if tracing is enabled
 //! This define depends on define NEWFILE from process_manager.h
-#define TRACENEWFILE
-//#define TRACEOLDFILE
+//#define TRACENEWFILE
+#define TRACEOLDFILE
 
 TRACEPOINT_EVENT(
         tp_provider,

@@ -93,6 +93,7 @@ typedef struct {
         ar & checksum;
     }
 } UMGR_s;
+
 typedef struct {
     string name0;
     string description1;
@@ -410,6 +411,5 @@ typedef struct {
     }
 
 } EXMPLE_s;
-
 
 #endif //CONFIGURATION_DAEMON_DATA_STORAGE_H

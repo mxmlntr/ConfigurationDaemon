@@ -1,0 +1,156 @@
+\hypertarget{classserializer}{}\section{serializer Class Reference}
+\label{classserializer}\index{serializer@{serializer}}
+
+
+Class of serializer for handling data serialization to files and shared memorys.  
+
+
+
+
+{\ttfamily \#include $<$serializer.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classserializer_a452477e4c216e38170128ae322bda7f9}{serialize\+Struct\+To\+File\+Mem\+Map} (\hyperlink{structUMGR__s}{U\+M\+G\+R\+\_\+s} Un\+Ser\+Data, string filename)
+\begin{DoxyCompactList}\small\item\em This method is overlaoded for every struct in data\+\_\+storage. \end{DoxyCompactList}\item 
+void \hyperlink{classserializer_ac313f0009f2a0612534248e408287cb2}{serialize\+Struct\+To\+File\+Mem\+Map} (\hyperlink{structEXMPLE__s}{E\+X\+M\+P\+L\+E\+\_\+s} Un\+Ser\+Data, string filename)
+\begin{DoxyCompactList}\small\item\em Function for serializing the struct into a file using memory mapping. \end{DoxyCompactList}\item 
+void \hyperlink{classserializer_a80bfb108b2cab0ec030c32a4d6aa9ad3}{serialize\+Struct\+To\+S\+HM} (\hyperlink{structUMGR__s}{U\+M\+G\+R\+\_\+s} Un\+Ser\+Data, string filename)
+\begin{DoxyCompactList}\small\item\em This method is overlaoded for every struct in data\+\_\+storage. \end{DoxyCompactList}\item 
+void \hyperlink{classserializer_afb4c60973c4be742fb82cb23d43e8fac}{serialize\+Struct\+To\+S\+HM} (\hyperlink{structEXMPLE__s}{E\+X\+M\+P\+L\+E\+\_\+s} Un\+Ser\+Data, string filename)
+\begin{DoxyCompactList}\small\item\em Function for serializing the struct to a shared memory segment. \end{DoxyCompactList}\item 
+void \hyperlink{classserializer_aadf6d2327ac10beefaf05ef93da36d45}{serialize\+Struct\+To\+File} (\hyperlink{structUMGR__s}{U\+M\+G\+R\+\_\+s} Un\+Ser\+Data, string filename)
+\begin{DoxyCompactList}\small\item\em Replaced by Mem\+Map implementation. \end{DoxyCompactList}\item 
+void \hyperlink{classserializer_ad4deb4a4d85720a5295dabc304544ac4}{copy\+Struct\+To\+S\+HM} (\hyperlink{structUMGR__s}{U\+M\+G\+R\+\_\+s} Un\+Ser\+Data, string filename)
+\begin{DoxyCompactList}\small\item\em unusable \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class of serializer for handling data serialization to files and shared memorys. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classserializer_ad4deb4a4d85720a5295dabc304544ac4}\label{classserializer_ad4deb4a4d85720a5295dabc304544ac4}} 
+\index{serializer@{serializer}!copy\+Struct\+To\+S\+HM@{copy\+Struct\+To\+S\+HM}}
+\index{copy\+Struct\+To\+S\+HM@{copy\+Struct\+To\+S\+HM}!serializer@{serializer}}
+\subsubsection{\texorpdfstring{copy\+Struct\+To\+S\+H\+M()}{copyStructToSHM()}}
+{\footnotesize\ttfamily void serializer\+::copy\+Struct\+To\+S\+HM (\begin{DoxyParamCaption}\item[{\hyperlink{structUMGR__s}{U\+M\+G\+R\+\_\+s}}]{Un\+Ser\+Data,  }\item[{string}]{filename }\end{DoxyParamCaption})}
+
+
+
+unusable 
+
+Not usable because memcpy does only work for P\+OD and string is not a P\+OD type. \mbox{\Hypertarget{classserializer_aadf6d2327ac10beefaf05ef93da36d45}\label{classserializer_aadf6d2327ac10beefaf05ef93da36d45}} 
+\index{serializer@{serializer}!serialize\+Struct\+To\+File@{serialize\+Struct\+To\+File}}
+\index{serialize\+Struct\+To\+File@{serialize\+Struct\+To\+File}!serializer@{serializer}}
+\subsubsection{\texorpdfstring{serialize\+Struct\+To\+File()}{serializeStructToFile()}}
+{\footnotesize\ttfamily void serializer\+::serialize\+Struct\+To\+File (\begin{DoxyParamCaption}\item[{\hyperlink{structUMGR__s}{U\+M\+G\+R\+\_\+s}}]{Un\+Ser\+Data,  }\item[{string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Replaced by Mem\+Map implementation. 
+
+Function for serializing the struct into a file using iostream. Erase the \char`\"{}.\+json\char`\"{} ending and add the \char`\"{}serial\char`\"{} tag
+
+Open an output filestream
+
+Create the output archive
+
+Serialize the data to the file
+
+Close output stream \mbox{\Hypertarget{classserializer_a452477e4c216e38170128ae322bda7f9}\label{classserializer_a452477e4c216e38170128ae322bda7f9}} 
+\index{serializer@{serializer}!serialize\+Struct\+To\+File\+Mem\+Map@{serialize\+Struct\+To\+File\+Mem\+Map}}
+\index{serialize\+Struct\+To\+File\+Mem\+Map@{serialize\+Struct\+To\+File\+Mem\+Map}!serializer@{serializer}}
+\subsubsection{\texorpdfstring{serialize\+Struct\+To\+File\+Mem\+Map()}{serializeStructToFileMemMap()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void serializer\+::serialize\+Struct\+To\+File\+Mem\+Map (\begin{DoxyParamCaption}\item[{\hyperlink{structUMGR__s}{U\+M\+G\+R\+\_\+s}}]{Un\+Ser\+Data,  }\item[{string}]{filename }\end{DoxyParamCaption})}
+
+
+
+This method is overlaoded for every struct in data\+\_\+storage. 
+
+Function for serializing the struct into a file using memory mapping. Erase the \char`\"{}.\+json\char`\"{} ending and add the \char`\"{}serial\char`\"{} tag
+
+Set the mapped file parameters
+
+Create a stream with the parameters
+
+Create the output archive
+
+Serialize the data to the file \mbox{\Hypertarget{classserializer_ac313f0009f2a0612534248e408287cb2}\label{classserializer_ac313f0009f2a0612534248e408287cb2}} 
+\index{serializer@{serializer}!serialize\+Struct\+To\+File\+Mem\+Map@{serialize\+Struct\+To\+File\+Mem\+Map}}
+\index{serialize\+Struct\+To\+File\+Mem\+Map@{serialize\+Struct\+To\+File\+Mem\+Map}!serializer@{serializer}}
+\subsubsection{\texorpdfstring{serialize\+Struct\+To\+File\+Mem\+Map()}{serializeStructToFileMemMap()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void serializer\+::serialize\+Struct\+To\+File\+Mem\+Map (\begin{DoxyParamCaption}\item[{\hyperlink{structEXMPLE__s}{E\+X\+M\+P\+L\+E\+\_\+s}}]{Un\+Ser\+Data,  }\item[{string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Function for serializing the struct into a file using memory mapping. 
+
+Erase the \char`\"{}.\+json\char`\"{} ending and add the \char`\"{}serial\char`\"{} tag
+
+Set the mapped file parameters
+
+Create a stream with the parameters
+
+Create the output archive
+
+Serialize the data to the file \mbox{\Hypertarget{classserializer_a80bfb108b2cab0ec030c32a4d6aa9ad3}\label{classserializer_a80bfb108b2cab0ec030c32a4d6aa9ad3}} 
+\index{serializer@{serializer}!serialize\+Struct\+To\+S\+HM@{serialize\+Struct\+To\+S\+HM}}
+\index{serialize\+Struct\+To\+S\+HM@{serialize\+Struct\+To\+S\+HM}!serializer@{serializer}}
+\subsubsection{\texorpdfstring{serialize\+Struct\+To\+S\+H\+M()}{serializeStructToSHM()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void serializer\+::serialize\+Struct\+To\+S\+HM (\begin{DoxyParamCaption}\item[{\hyperlink{structUMGR__s}{U\+M\+G\+R\+\_\+s}}]{Un\+Ser\+Data,  }\item[{string}]{filename }\end{DoxyParamCaption})}
+
+
+
+This method is overlaoded for every struct in data\+\_\+storage. 
+
+Function for serializing the struct to a shared memory segment.
+
+This function needs to be overloaded for different configration files tried to outsource the code into a seperated class \char`\"{}shared\+\_\+memory\char`\"{} but couldnt
+
+Erase the \char`\"{}.\+json\char`\"{} ending and add the \char`\"{}shm\char`\"{} tag
+
+Remove the shared memory object if it is still present
+
+create the shared memory object
+
+Setting the size of the S\+HM
+
+Map the shared memory into the address space
+
+create the output stream
+
+create the output archive
+
+Serialize the data to the file \mbox{\Hypertarget{classserializer_afb4c60973c4be742fb82cb23d43e8fac}\label{classserializer_afb4c60973c4be742fb82cb23d43e8fac}} 
+\index{serializer@{serializer}!serialize\+Struct\+To\+S\+HM@{serialize\+Struct\+To\+S\+HM}}
+\index{serialize\+Struct\+To\+S\+HM@{serialize\+Struct\+To\+S\+HM}!serializer@{serializer}}
+\subsubsection{\texorpdfstring{serialize\+Struct\+To\+S\+H\+M()}{serializeStructToSHM()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void serializer\+::serialize\+Struct\+To\+S\+HM (\begin{DoxyParamCaption}\item[{\hyperlink{structEXMPLE__s}{E\+X\+M\+P\+L\+E\+\_\+s}}]{Un\+Ser\+Data,  }\item[{string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Function for serializing the struct to a shared memory segment. 
+
+This function needs to be overloaded for different configration files tried to outsource the code into a seperated class \char`\"{}shared\+\_\+memory\char`\"{} but couldnt
+
+Erase the \char`\"{}.\+json\char`\"{} ending and add the \char`\"{}shm\char`\"{} tag
+
+Remove the shared memory object if it is still present
+
+create the shared memory object
+
+Setting the size of the S\+HM
+
+Map the shared memory into the address space
+
+create the output stream
+
+create the output archive
+
+Serialize the data to the file 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/visxim/\+C\+Lion\+Projects/\+Configuration\+\_\+daemon/includes/\hyperlink{serializer_8h}{serializer.\+h}\item 
+/home/visxim/\+C\+Lion\+Projects/\+Configuration\+\_\+daemon/\hyperlink{serializer_8cpp}{serializer.\+cpp}\end{DoxyCompactItemize}

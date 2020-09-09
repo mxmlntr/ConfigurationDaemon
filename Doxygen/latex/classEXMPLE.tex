@@ -1,0 +1,107 @@
+\hypertarget{classEXMPLE}{}\section{E\+X\+M\+P\+LE Class Reference}
+\label{classEXMPLE}\index{E\+X\+M\+P\+LE@{E\+X\+M\+P\+LE}}
+
+
+Derived class process manager.  
+
+
+
+
+{\ttfamily \#include $<$E\+X\+M\+P\+L\+E.\+h$>$}
+
+
+
+Inheritance diagram for E\+X\+M\+P\+LE\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{classEXMPLE__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for E\+X\+M\+P\+LE\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classEXMPLE__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classEXMPLE_a5969fa4c73afad1ed1a1d82b88117f80}{E\+X\+M\+P\+LE} ()
+\begin{DoxyCompactList}\small\item\em Constructor which initializes all the update\+\_\+manager-\/specific values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classfile}{file} \hyperlink{classEXMPLE_a2d5be0ecf649d40719d2c94cd683fe3f}{file1}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{classEXMPLE_a32f76326cf2b42a51b023b090f210289}{filename} = \char`\"{}E\+X\+M\+P\+L\+E.\+json\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Derived class process manager. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEXMPLE_a5969fa4c73afad1ed1a1d82b88117f80}\label{classEXMPLE_a5969fa4c73afad1ed1a1d82b88117f80}} 
+\index{E\+X\+M\+P\+LE@{E\+X\+M\+P\+LE}!E\+X\+M\+P\+LE@{E\+X\+M\+P\+LE}}
+\index{E\+X\+M\+P\+LE@{E\+X\+M\+P\+LE}!E\+X\+M\+P\+LE@{E\+X\+M\+P\+LE}}
+\subsubsection{\texorpdfstring{E\+X\+M\+P\+L\+E()}{EXMPLE()}}
+{\footnotesize\ttfamily E\+X\+M\+P\+L\+E\+::\+E\+X\+M\+P\+LE (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor which initializes all the update\+\_\+manager-\/specific values. 
+
+This constructor creates all necessary objects for the configuration of the update manager Create the messagequeue for synchronisation with the receiving process
+
+Receive the first meassage from the update manager process
+
+Check if the process calles \char`\"{}ready\char`\"{}
+
+True if a new file is present or changed were made to that file False if the file isnt new and no changes were made it That means that the file has been already serialized with the current configuration and the update manager process is notified that it shall receive the configuration from the binary file
+
+Set the filename/s for file/s associated with this process
+
+Notify the process that the data is ready in S\+HM
+
+Send msg that file is already serialized in file
+
+Switch case which evaluates the answer from the update manager process
+
+There can be an implementation after the answer has been evaluated, otherwise destroy the message queue Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classEXMPLE_a5969fa4c73afad1ed1a1d82b88117f80_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classEXMPLE_a2d5be0ecf649d40719d2c94cd683fe3f}\label{classEXMPLE_a2d5be0ecf649d40719d2c94cd683fe3f}} 
+\index{E\+X\+M\+P\+LE@{E\+X\+M\+P\+LE}!file1@{file1}}
+\index{file1@{file1}!E\+X\+M\+P\+LE@{E\+X\+M\+P\+LE}}
+\subsubsection{\texorpdfstring{file1}{file1}}
+{\footnotesize\ttfamily \hyperlink{classfile}{file} E\+X\+M\+P\+L\+E\+::file1}
+
+\mbox{\Hypertarget{classEXMPLE_a32f76326cf2b42a51b023b090f210289}\label{classEXMPLE_a32f76326cf2b42a51b023b090f210289}} 
+\index{E\+X\+M\+P\+LE@{E\+X\+M\+P\+LE}!filename@{filename}}
+\index{filename@{filename}!E\+X\+M\+P\+LE@{E\+X\+M\+P\+LE}}
+\subsubsection{\texorpdfstring{filename}{filename}}
+{\footnotesize\ttfamily string E\+X\+M\+P\+L\+E\+::filename = \char`\"{}E\+X\+M\+P\+L\+E.\+json\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/visxim/\+C\+Lion\+Projects/\+Configuration\+\_\+daemon/includes/\hyperlink{EXMPLE_8h}{E\+X\+M\+P\+L\+E.\+h}\item 
+/home/visxim/\+C\+Lion\+Projects/\+Configuration\+\_\+daemon/\hyperlink{EXMPLE_8cpp}{E\+X\+M\+P\+L\+E.\+cpp}\end{DoxyCompactItemize}

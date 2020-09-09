@@ -1,0 +1,44 @@
+\hypertarget{serializer_8h}{}\section{/home/visxim/\+C\+Lion\+Projects/\+Configuration\+\_\+daemon/includes/serializer.h File Reference}
+\label{serializer_8h}\index{/home/visxim/\+C\+Lion\+Projects/\+Configuration\+\_\+daemon/includes/serializer.\+h@{/home/visxim/\+C\+Lion\+Projects/\+Configuration\+\_\+daemon/includes/serializer.\+h}}
+
+
+Header of serializer for serializing the parsed configuration data.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}data\+\_\+storage.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$boost/archive/text\+\_\+oarchive.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/archive/text\+\_\+iarchive.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/archive/binary\+\_\+iarchive.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/archive/binary\+\_\+oarchive.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/interprocess/managed\+\_\+shared\+\_\+memory.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/iostreams/device/mapped\+\_\+file.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/iostreams/stream.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/serialization/vector.\+hpp$>$}\newline
+Include dependency graph for serializer.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{serializer_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{serializer_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classserializer}{serializer}
+\begin{DoxyCompactList}\small\item\em Class of serializer for handling data serialization to files and shared memorys. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header of serializer for serializing the parsed configuration data. 
+
+Serializer for serializing data to both shared memory and files 

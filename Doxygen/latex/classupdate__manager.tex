@@ -1,0 +1,109 @@
+\hypertarget{classupdate__manager}{}\section{update\+\_\+manager Class Reference}
+\label{classupdate__manager}\index{update\+\_\+manager@{update\+\_\+manager}}
+
+
+Derived class process manager.  
+
+
+
+
+{\ttfamily \#include $<$update\+\_\+manager.\+h$>$}
+
+
+
+Inheritance diagram for update\+\_\+manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{classupdate__manager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for update\+\_\+manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classupdate__manager__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classupdate__manager_a8e4ba9f4d46f5100825dd8853bdd06f4}{update\+\_\+manager} ()
+\begin{DoxyCompactList}\small\item\em Constructor which initializes all the update\+\_\+manager-\/specific values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classfile}{file} \hyperlink{classupdate__manager_a4c743063be347d20da665ace8fc1a4a2}{file1}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{classupdate__manager_a33846f6785525471da67ebfcbf36b5e6}{filename} = \char`\"{}U\+M\+G\+R.\+json\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Derived class process manager. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classupdate__manager_a8e4ba9f4d46f5100825dd8853bdd06f4}\label{classupdate__manager_a8e4ba9f4d46f5100825dd8853bdd06f4}} 
+\index{update\+\_\+manager@{update\+\_\+manager}!update\+\_\+manager@{update\+\_\+manager}}
+\index{update\+\_\+manager@{update\+\_\+manager}!update\+\_\+manager@{update\+\_\+manager}}
+\subsubsection{\texorpdfstring{update\+\_\+manager()}{update\_manager()}}
+{\footnotesize\ttfamily update\+\_\+manager\+::update\+\_\+manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor which initializes all the update\+\_\+manager-\/specific values. 
+
+This constructor creates all necessary objects for the configuration of the update manager Create the messagequeue for synchronisation with the receiving process
+
+Receive the first meassage from the update manager process
+
+Check if the process calles \char`\"{}ready\char`\"{}
+
+True if a new file is present or changed were made to that file False if the file isnt new and no changes were made it That means that the file has been already serialized with the current configuration and the update manager process is notified that it shall receive the configuration from the binary file
+
+Set the filename/s for file/s associated with this process
+
+Dummy files
+
+Notify the process that the data is ready in S\+HM
+
+Send msg that file is already serialized in file
+
+Switch case which evaluates the answer from the update manager process
+
+There can be an implementation after the answer has been evaluated, otherwise destroy the message queue Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classupdate__manager_a8e4ba9f4d46f5100825dd8853bdd06f4_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classupdate__manager_a4c743063be347d20da665ace8fc1a4a2}\label{classupdate__manager_a4c743063be347d20da665ace8fc1a4a2}} 
+\index{update\+\_\+manager@{update\+\_\+manager}!file1@{file1}}
+\index{file1@{file1}!update\+\_\+manager@{update\+\_\+manager}}
+\subsubsection{\texorpdfstring{file1}{file1}}
+{\footnotesize\ttfamily \hyperlink{classfile}{file} update\+\_\+manager\+::file1}
+
+\mbox{\Hypertarget{classupdate__manager_a33846f6785525471da67ebfcbf36b5e6}\label{classupdate__manager_a33846f6785525471da67ebfcbf36b5e6}} 
+\index{update\+\_\+manager@{update\+\_\+manager}!filename@{filename}}
+\index{filename@{filename}!update\+\_\+manager@{update\+\_\+manager}}
+\subsubsection{\texorpdfstring{filename}{filename}}
+{\footnotesize\ttfamily string update\+\_\+manager\+::filename = \char`\"{}U\+M\+G\+R.\+json\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/visxim/\+C\+Lion\+Projects/\+Configuration\+\_\+daemon/includes/\hyperlink{update__manager_8h}{update\+\_\+manager.\+h}\item 
+/home/visxim/\+C\+Lion\+Projects/\+Configuration\+\_\+daemon/\hyperlink{update__manager_8cpp}{update\+\_\+manager.\+cpp}\end{DoxyCompactItemize}

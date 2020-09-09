@@ -1,0 +1,5 @@
+<map id="file" name="file">
+<area shape="rect" id="node2" href="$classJSON__manager.html" title="JSON manager class for reading and parsing JSON data. " alt="" coords="83,95,197,121"/>
+<area shape="rect" id="node3" href="$classchecksum__manager.html" title="Class of checksum manager for CRC managment. " alt="" coords="5,5,144,32"/>
+<area shape="rect" id="node4" href="$classserializer.html" title="Class of serializer for handling data serialization to files and shared memorys. " alt="" coords="168,5,243,32"/>
+</map>

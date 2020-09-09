@@ -1,0 +1,13 @@
+<map id="/home/visxim/CLionProjects/Configuration_daemon/main.cpp" name="/home/visxim/CLionProjects/Configuration_daemon/main.cpp">
+<area shape="rect" id="node2" href="$update__manager_8h.html" title="Header of update_manager method definition. " alt="" coords="2455,95,2585,121"/>
+<area shape="rect" id="node33" href="$time-tp_8h.html" title="time&#45;tp.h" alt="" coords="2674,393,2747,420"/>
+<area shape="rect" id="node39" href="$EXMPLE_8h.html" title="Header of EXMPLE method definition. " alt="" coords="2609,95,2695,121"/>
+<area shape="rect" id="node3" href="$process__manager_8h.html" title="Header of process_manager method definition. " alt="" coords="2452,169,2588,196"/>
+<area shape="rect" id="node4" href="$deserializer_8h.html" title="Header of deserializer for deserializing the parsed configuration data. " alt="" coords="801,393,900,420"/>
+<area shape="rect" id="node21" href="$file_8h.html" title="Header of file methods for file handling. " alt="" coords="2231,244,2281,271"/>
+<area shape="rect" id="node36" href="$message__manager_8h.html" title="Header of message_manager for managing the synchronization between processes. " alt="" coords="2498,393,2641,420"/>
+<area shape="rect" id="node5" href="$data__storage_8h.html" title="Header of checksum_manager for checking the integrity of the data. " alt="" coords="1586,475,1694,502"/>
+<area shape="rect" id="node22" href="$JSON__manager_8h.html" title="Header of JSON_manager for handling JSON data. " alt="" coords="1946,319,2073,345"/>
+<area shape="rect" id="node29" href="$serializer_8h.html" title="Header of serializer for serializing the parsed configuration data. " alt="" coords="1116,393,1201,420"/>
+<area shape="rect" id="node32" href="$checksum__manager_8h.html" title="Header of checksum_manager for checking the integrity of the data. " alt="" coords="1639,393,1790,420"/>
+</map>

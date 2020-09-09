@@ -1,0 +1,16 @@
+<map id="/home/visxim/CLionProjects/Configuration_daemon/includes/serializer.h" name="/home/visxim/CLionProjects/Configuration_daemon/includes/serializer.h">
+<area shape="rect" id="node2" href="$serializer_8cpp.html" title="Serializer for serializing the parsed configuration data. " alt="" coords="5,117,243,158"/>
+<area shape="rect" id="node3" href="$JSON__manager_8h.html" title="Header of JSON_manager for handling JSON data. " alt="" coords="267,109,475,165"/>
+<area shape="rect" id="node4" href="$JSON__manager_8cpp.html" title="JSON_manager for handling JSON data. " alt="" coords="151,213,347,269"/>
+<area shape="rect" id="node5" href="$file_8h.html" title="Header of file methods for file handling. " alt="" coords="372,221,612,262"/>
+<area shape="rect" id="node6" href="$file_8cpp.html" title="file methods for file handling " alt="" coords="276,325,479,366"/>
+<area shape="rect" id="node7" href="$process__manager_8h.html" title="Header of process_manager method definition. " alt="" coords="503,317,711,373"/>
+<area shape="rect" id="node8" href="$process__manager_8cpp.html" title="process_manager method definition " alt="" coords="155,421,362,477"/>
+<area shape="rect" id="node9" href="$EXMPLE_8h.html" title="Header of EXMPLE method definition. " alt="" coords="387,421,595,477"/>
+<area shape="rect" id="node12" href="$process__manager__factory_8h.html" title="/home/visxim/CLionProjects\l/Configuration_daemon/includes\l/process_manager_factory.h" alt="" coords="847,525,1055,581"/>
+<area shape="rect" id="node14" href="$update__manager_8h.html" title="Header of update_manager method definition. " alt="" coords="619,421,827,477"/>
+<area shape="rect" id="node10" href="$EXMPLE_8cpp.html" title="EXMPLE method definition. " alt="" coords="122,533,361,574"/>
+<area shape="rect" id="node11" href="$main_8cpp.html" title="main of the configuration daemon " alt="" coords="385,533,599,574"/>
+<area shape="rect" id="node13" href="$process__manager__factory_8cpp.html" title="/home/visxim/CLionProjects\l/Configuration_daemon/process\l_manager_factory.cpp" alt="" coords="847,629,1054,685"/>
+<area shape="rect" id="node15" href="$update__manager_8cpp.html" title="update_manager method definition " alt="" coords="623,525,822,581"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="file::callJSON" name="file::callJSON">
+<area shape="rect" id="node2" href="$classJSON__manager.html#a9b600a34d73fd3f28bf00ddf3f2e6640" title="Function for reading the JSON file and parsing it into a document object. " alt="" coords="183,5,355,32"/>
+<area shape="rect" id="node3" href="$classJSON__manager.html#a7bb6db218d195494ca939233671cb183" title="Function for parsing the interpreted JSON data from the file into a predefinied struct (to find in da..." alt="" coords="156,57,383,98"/>
+<area shape="rect" id="node4" href="$classserializer.html#a80bfb108b2cab0ec030c32a4d6aa9ad3" title="This method is overlaoded for every struct in data_storage. " alt="" coords="431,23,596,65"/>
+<area shape="rect" id="node5" href="$classserializer.html#a452477e4c216e38170128ae322bda7f9" title="This method is overlaoded for every struct in data_storage. " alt="" coords="431,89,596,130"/>
+</map>

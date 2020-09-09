@@ -1,0 +1,13 @@
+<map id="update_manager::update_manager" name="update_manager::update_manager">
+<area shape="rect" id="node2" href="$classmessage__manager.html#a63f1f841de93a791c5520f64ff797639" title="Method for creating the message queue. " alt="" coords="219,5,443,32"/>
+<area shape="rect" id="node3" href="$classmessage__manager.html#a186a0f3b9e4e0a34a26f57f118a9dad7" title="Receive a message. " alt="" coords="223,56,438,83"/>
+<area shape="rect" id="node4" href="$classprocess__manager.html#a8abc5c342a3ed882973183b77405b667" title="function which simulates the check of a file status " alt="" coords="247,107,415,149"/>
+<area shape="rect" id="node5" href="$classfile.html#a04d228a8eabeb75ed6f6f7c87f5053db" title="Function for setting the filename of the configuration file for this file&#45;object. ..." alt="" coords="273,173,388,200"/>
+<area shape="rect" id="node6" href="$classfile.html#a6f3aeac1f4b08cd52b7879ea999fded1" title="Function for retreiving the JSON information from the file. " alt="" coords="279,224,382,251"/>
+<area shape="rect" id="node11" href="$classmessage__manager.html#a1f802ec26eed0834f69988f43f194273" title="Send a message. " alt="" coords="231,275,431,301"/>
+<area shape="rect" id="node12" href="$classmessage__manager.html#ad6d2784240bffb39dc7e2dae9d6b0751" title="Method for destroying the message queues. " alt="" coords="239,326,422,367"/>
+<area shape="rect" id="node7" href="$classJSON__manager.html#a9b600a34d73fd3f28bf00ddf3f2e6640" title="Function for reading the JSON file and parsing it into a document object. " alt="" coords="518,195,690,221"/>
+<area shape="rect" id="node8" href="$classJSON__manager.html#a7bb6db218d195494ca939233671cb183" title="Function for parsing the interpreted JSON data from the file into a predefinied struct (to find in da..." alt="" coords="491,246,717,287"/>
+<area shape="rect" id="node9" href="$classserializer.html#a80bfb108b2cab0ec030c32a4d6aa9ad3" title="This method is overlaoded for every struct in data_storage. " alt="" coords="765,213,931,254"/>
+<area shape="rect" id="node10" href="$classserializer.html#a452477e4c216e38170128ae322bda7f9" title="This method is overlaoded for every struct in data_storage. " alt="" coords="765,278,931,319"/>
+</map>

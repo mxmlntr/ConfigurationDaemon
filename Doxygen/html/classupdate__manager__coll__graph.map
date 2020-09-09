@@ -1,0 +1,9 @@
+<map id="update_manager" name="update_manager">
+<area shape="rect" id="node2" href="$classprocess__manager.html" title="Class for all basic members needed in the derived classes. " alt="" coords="149,184,274,211"/>
+<area shape="rect" id="node3" href="$classmessage__manager.html" title="Class of message manager which handles the synchronization between processes. " alt="" coords="5,95,137,121"/>
+<area shape="rect" id="node4" href="$classdeserializer.html" title="Class of deserializer which handles deserialization of data from files and shared memory..." alt="" coords="167,95,255,121"/>
+<area shape="rect" id="node5" href="$classfile.html" title="File class for handling file access. " alt="" coords="304,184,343,211"/>
+<area shape="rect" id="node6" href="$classJSON__manager.html" title="JSON manager class for reading and parsing JSON data. " alt="" coords="279,95,394,121"/>
+<area shape="rect" id="node7" href="$classchecksum__manager.html" title="Class of checksum manager for CRC managment. " alt="" coords="202,5,341,32"/>
+<area shape="rect" id="node8" href="$classserializer.html" title="Class of serializer for handling data serialization to files and shared memorys. " alt="" coords="365,5,439,32"/>
+</map>

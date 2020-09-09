@@ -1,0 +1,140 @@
+\hypertarget{classJSON__manager}{}\section{J\+S\+O\+N\+\_\+manager Class Reference}
+\label{classJSON__manager}\index{J\+S\+O\+N\+\_\+manager@{J\+S\+O\+N\+\_\+manager}}
+
+
+J\+S\+ON manager class for reading and parsing J\+S\+ON data.  
+
+
+
+
+{\ttfamily \#include $<$J\+S\+O\+N\+\_\+manager.\+h$>$}
+
+
+
+Collaboration diagram for J\+S\+O\+N\+\_\+manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{classJSON__manager__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{classJSON__manager_a9b600a34d73fd3f28bf00ddf3f2e6640}{read\+\_\+file} (string filename)
+\begin{DoxyCompactList}\small\item\em Function for reading the J\+S\+ON file and parsing it into a document object. \end{DoxyCompactList}\item 
+string \hyperlink{classJSON__manager_a5d05e5f8eb6883f38181d48cf26cc5fc}{get\+\_\+json\+\_\+config\+\_\+string} ()
+\begin{DoxyCompactList}\small\item\em Return the whole J\+S\+ON data as a string from the document object. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classJSON__manager_a7bb6db218d195494ca939233671cb183}{parse\+To\+Structand\+Serialize} (string filename)
+\begin{DoxyCompactList}\small\item\em Function for parsing the interpreted J\+S\+ON data from the file into a predefinied struct (to find in \hyperlink{data__storage_8h}{data\+\_\+storage.\+h}) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Document \hyperlink{classJSON__manager_afa1c5569b74bd68fe785d553c798c4dd}{doc}
+\item 
+\hyperlink{classserializer}{serializer} \hyperlink{classJSON__manager_a0997283f905b0f2b4a58ad1ee6d678ed}{ser}
+\item 
+\hyperlink{classchecksum__manager}{checksum\+\_\+manager} \hyperlink{classJSON__manager_aa610a0117c11984a38dcf8ddbe9e985d}{C\+RC}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+J\+S\+ON manager class for reading and parsing J\+S\+ON data. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classJSON__manager_a5d05e5f8eb6883f38181d48cf26cc5fc}\label{classJSON__manager_a5d05e5f8eb6883f38181d48cf26cc5fc}} 
+\index{J\+S\+O\+N\+\_\+manager@{J\+S\+O\+N\+\_\+manager}!get\+\_\+json\+\_\+config\+\_\+string@{get\+\_\+json\+\_\+config\+\_\+string}}
+\index{get\+\_\+json\+\_\+config\+\_\+string@{get\+\_\+json\+\_\+config\+\_\+string}!J\+S\+O\+N\+\_\+manager@{J\+S\+O\+N\+\_\+manager}}
+\subsubsection{\texorpdfstring{get\+\_\+json\+\_\+config\+\_\+string()}{get\_json\_config\_string()}}
+{\footnotesize\ttfamily string J\+S\+O\+N\+\_\+manager\+::get\+\_\+json\+\_\+config\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Return the whole J\+S\+ON data as a string from the document object. 
+
+\mbox{\Hypertarget{classJSON__manager_a7bb6db218d195494ca939233671cb183}\label{classJSON__manager_a7bb6db218d195494ca939233671cb183}} 
+\index{J\+S\+O\+N\+\_\+manager@{J\+S\+O\+N\+\_\+manager}!parse\+To\+Structand\+Serialize@{parse\+To\+Structand\+Serialize}}
+\index{parse\+To\+Structand\+Serialize@{parse\+To\+Structand\+Serialize}!J\+S\+O\+N\+\_\+manager@{J\+S\+O\+N\+\_\+manager}}
+\subsubsection{\texorpdfstring{parse\+To\+Structand\+Serialize()}{parseToStructandSerialize()}}
+{\footnotesize\ttfamily unsigned int J\+S\+O\+N\+\_\+manager\+::parse\+To\+Structand\+Serialize (\begin{DoxyParamCaption}\item[{string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Function for parsing the interpreted J\+S\+ON data from the file into a predefinied struct (to find in \hyperlink{data__storage_8h}{data\+\_\+storage.\+h}) 
+
+compare the filename to find the right implementation
+
+create the matching struct
+
+parse all the data into this struct
+
+pass the config string, created from the struct to receive the checksum
+
+call the serialize and pass the struct to be serialized into S\+HM
+
+not usable see function for details
+
+call the serialize and pass the struct to be serialized into a file
+
+compare the filename to find the right implementation
+
+create the matching struct
+
+parse all the data into this struct
+
+pass the config string, created from the struct to receive the checksum
+
+call the serialize and pass the struct to be serialized into S\+HM
+
+call the serialize and pass the struct to be serialized into a file
+
+default case Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classJSON__manager_a7bb6db218d195494ca939233671cb183_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classJSON__manager_a9b600a34d73fd3f28bf00ddf3f2e6640}\label{classJSON__manager_a9b600a34d73fd3f28bf00ddf3f2e6640}} 
+\index{J\+S\+O\+N\+\_\+manager@{J\+S\+O\+N\+\_\+manager}!read\+\_\+file@{read\+\_\+file}}
+\index{read\+\_\+file@{read\+\_\+file}!J\+S\+O\+N\+\_\+manager@{J\+S\+O\+N\+\_\+manager}}
+\subsubsection{\texorpdfstring{read\+\_\+file()}{read\_file()}}
+{\footnotesize\ttfamily unsigned int J\+S\+O\+N\+\_\+manager\+::read\+\_\+file (\begin{DoxyParamCaption}\item[{string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Function for reading the J\+S\+ON file and parsing it into a document object. 
+
+Read the whole file line by line and store it into the \char`\"{}json\char`\"{} string
+
+convert the read string into const char$\ast$ and parse to document
+
+Parse the converted \char`\"{}json\char`\"{} string into a document object 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classJSON__manager_aa610a0117c11984a38dcf8ddbe9e985d}\label{classJSON__manager_aa610a0117c11984a38dcf8ddbe9e985d}} 
+\index{J\+S\+O\+N\+\_\+manager@{J\+S\+O\+N\+\_\+manager}!C\+RC@{C\+RC}}
+\index{C\+RC@{C\+RC}!J\+S\+O\+N\+\_\+manager@{J\+S\+O\+N\+\_\+manager}}
+\subsubsection{\texorpdfstring{C\+RC}{CRC}}
+{\footnotesize\ttfamily \hyperlink{classchecksum__manager}{checksum\+\_\+manager} J\+S\+O\+N\+\_\+manager\+::\+C\+RC\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classJSON__manager_afa1c5569b74bd68fe785d553c798c4dd}\label{classJSON__manager_afa1c5569b74bd68fe785d553c798c4dd}} 
+\index{J\+S\+O\+N\+\_\+manager@{J\+S\+O\+N\+\_\+manager}!doc@{doc}}
+\index{doc@{doc}!J\+S\+O\+N\+\_\+manager@{J\+S\+O\+N\+\_\+manager}}
+\subsubsection{\texorpdfstring{doc}{doc}}
+{\footnotesize\ttfamily Document J\+S\+O\+N\+\_\+manager\+::doc\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classJSON__manager_a0997283f905b0f2b4a58ad1ee6d678ed}\label{classJSON__manager_a0997283f905b0f2b4a58ad1ee6d678ed}} 
+\index{J\+S\+O\+N\+\_\+manager@{J\+S\+O\+N\+\_\+manager}!ser@{ser}}
+\index{ser@{ser}!J\+S\+O\+N\+\_\+manager@{J\+S\+O\+N\+\_\+manager}}
+\subsubsection{\texorpdfstring{ser}{ser}}
+{\footnotesize\ttfamily \hyperlink{classserializer}{serializer} J\+S\+O\+N\+\_\+manager\+::ser\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/visxim/\+C\+Lion\+Projects/\+Configuration\+\_\+daemon/includes/\hyperlink{JSON__manager_8h}{J\+S\+O\+N\+\_\+manager.\+h}\item 
+/home/visxim/\+C\+Lion\+Projects/\+Configuration\+\_\+daemon/\hyperlink{JSON__manager_8cpp}{J\+S\+O\+N\+\_\+manager.\+cpp}\end{DoxyCompactItemize}

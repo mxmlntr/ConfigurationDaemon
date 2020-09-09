@@ -1,0 +1,128 @@
+\hypertarget{process__manager_8h}{}\section{/home/visxim/\+C\+Lion\+Projects/\+Configuration\+\_\+daemon/includes/process\+\_\+manager.h File Reference}
+\label{process__manager_8h}\index{/home/visxim/\+C\+Lion\+Projects/\+Configuration\+\_\+daemon/includes/process\+\_\+manager.\+h@{/home/visxim/\+C\+Lion\+Projects/\+Configuration\+\_\+daemon/includes/process\+\_\+manager.\+h}}
+
+
+Header of \hyperlink{classprocess__manager}{process\+\_\+manager} method definition.  
+
+
+{\ttfamily \#include \char`\"{}deserializer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}file.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}message\+\_\+manager.\+h\char`\"{}}\newline
+Include dependency graph for process\+\_\+manager.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{process__manager_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{process__manager_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classprocess__manager}{process\+\_\+manager}
+\begin{DoxyCompactList}\small\item\em Class for all basic members needed in the derived classes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{process__manager_8h_a239431542776c34156c0fedcbd1f70f7}{N\+E\+W\+F\+I\+LE}
+\begin{DoxyCompactList}\small\item\em Defines if a new file is present (also see check\+\_\+file\+\_\+status()) \end{DoxyCompactList}\item 
+\#define \hyperlink{process__manager_8h_a25e7852941475e51c875632ac1985d8a}{P\+R\+I\+O\+R\+I\+TY}~1
+\begin{DoxyCompactList}\small\item\em Defines the priority of the messages in the message queues. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{process__manager_8h_a1f035773fc136ce529c9c22f3953f7c9}{Sync\+Msg} \{ \newline
+\hyperlink{process__manager_8h_a1f035773fc136ce529c9c22f3953f7c9a2b8773a31e7caeffc27df2c78df7bd3a}{Process\+Timeout} = 00, 
+\hyperlink{process__manager_8h_a1f035773fc136ce529c9c22f3953f7c9ac9780f79be0e3d433adeb055d70a4ef6}{Process\+Ready} = 11, 
+\hyperlink{process__manager_8h_a1f035773fc136ce529c9c22f3953f7c9a3f1f1c2def7164cf1b9b525c6754ec59}{Data\+Rdy\+S\+HM} = 22, 
+\hyperlink{process__manager_8h_a1f035773fc136ce529c9c22f3953f7c9afc92e28c7aac0d36a3de10fd16c2f6e9}{Data\+Rdy\+File} = 33, 
+\newline
+\hyperlink{process__manager_8h_a1f035773fc136ce529c9c22f3953f7c9a70c465830655f986848e14567e3a0992}{Data\+Receive\+Success} = 44, 
+\hyperlink{process__manager_8h_a1f035773fc136ce529c9c22f3953f7c9add9875ee9a2249b033cf9a59afba954d}{Data\+Error\+C\+RC} = 55, 
+\hyperlink{process__manager_8h_a1f035773fc136ce529c9c22f3953f7c9ad970cf97730e7c404d0bf7c460f753df}{Receiving\+Error} = 66, 
+\hyperlink{process__manager_8h_a1f035773fc136ce529c9c22f3953f7c9aa343c85c32133b3cca6bc019bf6386c4}{Daemon\+Timeout} = 77
+ \}\begin{DoxyCompactList}\small\item\em Enum for synchronization via message queue. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header of \hyperlink{classprocess__manager}{process\+\_\+manager} method definition. 
+
+\hyperlink{classprocess__manager}{process\+\_\+manager} shall be used to create derived classes from it, it contains all the basic functions which every derived class should have 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{process__manager_8h_a239431542776c34156c0fedcbd1f70f7}\label{process__manager_8h_a239431542776c34156c0fedcbd1f70f7}} 
+\index{process\+\_\+manager.\+h@{process\+\_\+manager.\+h}!N\+E\+W\+F\+I\+LE@{N\+E\+W\+F\+I\+LE}}
+\index{N\+E\+W\+F\+I\+LE@{N\+E\+W\+F\+I\+LE}!process\+\_\+manager.\+h@{process\+\_\+manager.\+h}}
+\subsubsection{\texorpdfstring{N\+E\+W\+F\+I\+LE}{NEWFILE}}
+{\footnotesize\ttfamily \#define N\+E\+W\+F\+I\+LE}
+
+
+
+Defines if a new file is present (also see check\+\_\+file\+\_\+status()) 
+
+\mbox{\Hypertarget{process__manager_8h_a25e7852941475e51c875632ac1985d8a}\label{process__manager_8h_a25e7852941475e51c875632ac1985d8a}} 
+\index{process\+\_\+manager.\+h@{process\+\_\+manager.\+h}!P\+R\+I\+O\+R\+I\+TY@{P\+R\+I\+O\+R\+I\+TY}}
+\index{P\+R\+I\+O\+R\+I\+TY@{P\+R\+I\+O\+R\+I\+TY}!process\+\_\+manager.\+h@{process\+\_\+manager.\+h}}
+\subsubsection{\texorpdfstring{P\+R\+I\+O\+R\+I\+TY}{PRIORITY}}
+{\footnotesize\ttfamily \#define P\+R\+I\+O\+R\+I\+TY~1}
+
+
+
+Defines the priority of the messages in the message queues. 
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{process__manager_8h_a1f035773fc136ce529c9c22f3953f7c9}\label{process__manager_8h_a1f035773fc136ce529c9c22f3953f7c9}} 
+\index{process\+\_\+manager.\+h@{process\+\_\+manager.\+h}!Sync\+Msg@{Sync\+Msg}}
+\index{Sync\+Msg@{Sync\+Msg}!process\+\_\+manager.\+h@{process\+\_\+manager.\+h}}
+\subsubsection{\texorpdfstring{Sync\+Msg}{SyncMsg}}
+{\footnotesize\ttfamily enum \hyperlink{process__manager_8h_a1f035773fc136ce529c9c22f3953f7c9}{Sync\+Msg}}
+
+
+
+Enum for synchronization via message queue. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Process\+Timeout@{Process\+Timeout}!process\+\_\+manager.\+h@{process\+\_\+manager.\+h}}\index{process\+\_\+manager.\+h@{process\+\_\+manager.\+h}!Process\+Timeout@{Process\+Timeout}}}\mbox{\Hypertarget{process__manager_8h_a1f035773fc136ce529c9c22f3953f7c9a2b8773a31e7caeffc27df2c78df7bd3a}\label{process__manager_8h_a1f035773fc136ce529c9c22f3953f7c9a2b8773a31e7caeffc27df2c78df7bd3a}} 
+Process\+Timeout&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Process\+Ready@{Process\+Ready}!process\+\_\+manager.\+h@{process\+\_\+manager.\+h}}\index{process\+\_\+manager.\+h@{process\+\_\+manager.\+h}!Process\+Ready@{Process\+Ready}}}\mbox{\Hypertarget{process__manager_8h_a1f035773fc136ce529c9c22f3953f7c9ac9780f79be0e3d433adeb055d70a4ef6}\label{process__manager_8h_a1f035773fc136ce529c9c22f3953f7c9ac9780f79be0e3d433adeb055d70a4ef6}} 
+Process\+Ready&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Data\+Rdy\+S\+HM@{Data\+Rdy\+S\+HM}!process\+\_\+manager.\+h@{process\+\_\+manager.\+h}}\index{process\+\_\+manager.\+h@{process\+\_\+manager.\+h}!Data\+Rdy\+S\+HM@{Data\+Rdy\+S\+HM}}}\mbox{\Hypertarget{process__manager_8h_a1f035773fc136ce529c9c22f3953f7c9a3f1f1c2def7164cf1b9b525c6754ec59}\label{process__manager_8h_a1f035773fc136ce529c9c22f3953f7c9a3f1f1c2def7164cf1b9b525c6754ec59}} 
+Data\+Rdy\+S\+HM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Data\+Rdy\+File@{Data\+Rdy\+File}!process\+\_\+manager.\+h@{process\+\_\+manager.\+h}}\index{process\+\_\+manager.\+h@{process\+\_\+manager.\+h}!Data\+Rdy\+File@{Data\+Rdy\+File}}}\mbox{\Hypertarget{process__manager_8h_a1f035773fc136ce529c9c22f3953f7c9afc92e28c7aac0d36a3de10fd16c2f6e9}\label{process__manager_8h_a1f035773fc136ce529c9c22f3953f7c9afc92e28c7aac0d36a3de10fd16c2f6e9}} 
+Data\+Rdy\+File&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Data\+Receive\+Success@{Data\+Receive\+Success}!process\+\_\+manager.\+h@{process\+\_\+manager.\+h}}\index{process\+\_\+manager.\+h@{process\+\_\+manager.\+h}!Data\+Receive\+Success@{Data\+Receive\+Success}}}\mbox{\Hypertarget{process__manager_8h_a1f035773fc136ce529c9c22f3953f7c9a70c465830655f986848e14567e3a0992}\label{process__manager_8h_a1f035773fc136ce529c9c22f3953f7c9a70c465830655f986848e14567e3a0992}} 
+Data\+Receive\+Success&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Data\+Error\+C\+RC@{Data\+Error\+C\+RC}!process\+\_\+manager.\+h@{process\+\_\+manager.\+h}}\index{process\+\_\+manager.\+h@{process\+\_\+manager.\+h}!Data\+Error\+C\+RC@{Data\+Error\+C\+RC}}}\mbox{\Hypertarget{process__manager_8h_a1f035773fc136ce529c9c22f3953f7c9add9875ee9a2249b033cf9a59afba954d}\label{process__manager_8h_a1f035773fc136ce529c9c22f3953f7c9add9875ee9a2249b033cf9a59afba954d}} 
+Data\+Error\+C\+RC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Receiving\+Error@{Receiving\+Error}!process\+\_\+manager.\+h@{process\+\_\+manager.\+h}}\index{process\+\_\+manager.\+h@{process\+\_\+manager.\+h}!Receiving\+Error@{Receiving\+Error}}}\mbox{\Hypertarget{process__manager_8h_a1f035773fc136ce529c9c22f3953f7c9ad970cf97730e7c404d0bf7c460f753df}\label{process__manager_8h_a1f035773fc136ce529c9c22f3953f7c9ad970cf97730e7c404d0bf7c460f753df}} 
+Receiving\+Error&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Daemon\+Timeout@{Daemon\+Timeout}!process\+\_\+manager.\+h@{process\+\_\+manager.\+h}}\index{process\+\_\+manager.\+h@{process\+\_\+manager.\+h}!Daemon\+Timeout@{Daemon\+Timeout}}}\mbox{\Hypertarget{process__manager_8h_a1f035773fc136ce529c9c22f3953f7c9aa343c85c32133b3cca6bc019bf6386c4}\label{process__manager_8h_a1f035773fc136ce529c9c22f3953f7c9aa343c85c32133b3cca6bc019bf6386c4}} 
+Daemon\+Timeout&\\
+\hline
+
+\end{DoxyEnumFields}

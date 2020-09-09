@@ -1,0 +1,4 @@
+<map id="process_manager" name="process_manager">
+<area shape="rect" id="node2" href="$classmessage__manager.html" title="Class of message manager which handles the synchronization between processes. " alt="" coords="5,5,137,32"/>
+<area shape="rect" id="node3" href="$classdeserializer.html" title="Class of deserializer which handles deserialization of data from files and shared memory..." alt="" coords="167,5,255,32"/>
+</map>
